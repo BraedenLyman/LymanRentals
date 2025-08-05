@@ -1,242 +1,45 @@
-import { Heading, Text, Flex, Image, Button, Card } from "@chakra-ui/react";
+import { Heading, Text, Flex, Image, Button, Card, SimpleGrid, Box } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+
+const rentalItems = [
+    { name: "Whiskey Barrel Tables", link: "/whiskey-barrel-tables", image: "/images/barrel.png" },
+    { name: "Benches", link: "/benches", image: "/images/bench.png" },
+    { name: "Arches", link: "/arches", image: "/images/arch.png" },
+    { name: "Whiskey Barrel Bar", link: "/whiskey-barrel-bar", image: "/path-to-image.jpg" },
+    { name: "Chest Coffee Table", link: "/chest-coffee-table", image: "/path-to-image.jpg" },
+    { name: "Desert Ladder", link: "/desert-ladder", image: "/path-to-image.jpg" },
+    { name: "Memory Ladder", link: "/memory-ladder", image: "/path-to-image.jpg" },
+    { name: "Order Of Events", link: "/order-of-events", image: "/path-to-image.jpg" },
+    { name: "Candle Lanterns", link: "/candle-lanterns", image: "/path-to-image.jpg" },
+    { name: "Decorations", link: "/decorations", image: "/path-to-image.jpg" },
+    { name: "Edison Lights", link: "/edison-lights", image: "/path-to-image.jpg" },
+    { name: "Photo Backdrop", link: "/photo-backdrop", image: "/path-to-image.jpg" },
+    { name: "Water Jugs", link: "/water-jugs", image: "/path-to-image.jpg" },
+    { name: "Stock Tanks", link: "/stock-tanks", image: "/path-to-image.jpg" },
+]
 
 function Offer() {
 
   return (
-    <div>
-      <Flex
-        direction="column"
-        align="center"
-        justify="center"
-      >
-        <Heading size="xl" textAlign="center" marginTop="80px" marginBottom="80px">
-            What We Offer
-        </Heading>
+    <Box maxW="container.xl" mx="auto" py={{ base: 12, md: 20 }}>
+      <Heading as="h1" size="3xl" textAlign="center" mb={16} fontFamily="Playfair Display">
+          What We Offer
+      </Heading>
 
-        {/* Row 1 */}
-         <Flex
-          direction="row"
-          align="center"
-          justify="center"
-          gap="100px"
-          marginBottom="100px"
-        >
-            {/* Whiskey Barrel Tables */}
-            <Card width="300px" height="300" padding={"20px"}>
-                <Image border="2px solid green" width={200} height={200} marginLeft={"auto"} marginRight={"auto"} marginBottom={"10px"}/>
-                <Heading size="md" textAlign="center">Whiskey Barrel Tables</Heading>
-                
-                <Flex marginLeft="auto" marginRight="auto" marginTop="20px">
-                    <Link to="/whiskey-barrel-tables">
-                        <Button size="md" marginTop="auto">Details</Button>
-                    </Link>
-                </Flex>
+      <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} spacing={10}>
+          {rentalItems.map((item) => (
+             <Card key={item.name} borderWidth="1px" borderRadius="lg" overflow="hidden" _hover={{ shadow: 'xl', transform: 'translateY(-5px)' }} transition="all 0.3s ease-in-out">
+                <Image src={item.image} alt={item.name} h="250px" w="full" objectFit="cover" />
+                <Box p={6} bg="white">
+                    <Heading as="h3" size="lg" textAlign="center" fontFamily="Playfair Display" textColor="#000" mb={4}>{item.name}</Heading>
+                    <Flex justify="center">
+                        <Button as={Link} to={item.link} colorScheme="blue" variant="solid">Details</Button>
+                    </Flex>
+                </Box>
             </Card>
-
-            {/* Benches */}
-            <Card width="300px" height="300" padding={"20px"}>
-                <Image border="2px solid green" width={200} height={200} marginLeft={"auto"} marginRight={"auto"} marginBottom={"10px"}/>
-                <Heading size="md" textAlign="center">Benches</Heading>
-                
-                <Flex marginLeft="auto" marginRight="auto" marginTop="20px">
-                    <Link to="/benches">
-                        <Button size="md" marginTop="auto">Details</Button>
-                    </Link>
-                </Flex>
-            </Card>
-
-            {/* Arches */}
-            <Card width="300px" height="300" padding={"20px"}>
-                <Image border="2px solid green" width={200} height={200} marginLeft={"auto"} marginRight={"auto"} marginBottom={"10px"}/>
-                <Heading size="md" textAlign="center">Arches</Heading>
-                
-                <Flex marginLeft="auto" marginRight="auto" marginTop="20px">
-                    <Link to="/arches">
-                        <Button size="md" marginTop="auto">Details</Button>
-                    </Link>
-                </Flex>
-            </Card>
-        </Flex>
-
-
-        {/* Row 2 */}
-        <Flex
-          direction="row"
-          align="center"
-          justify="center"
-          //minH="40vh"
-          gap="100px"
-          marginBottom="100px"
-        >
-            {/* Whiskey Barrel Bar */}
-            <Card width="300px" height="300" padding={"20px"}>
-                <Image border="2px solid green" width={200} height={200} marginLeft={"auto"} marginRight={"auto"} marginBottom={"10px"}/>
-                <Heading size="md" textAlign="center">Whiskey Barrel Bar</Heading>
-                
-                <Flex marginLeft="auto" marginRight="auto" marginTop="20px">
-                    <Link to="/whiskey-barrel-bar">
-                        <Button size="md" marginTop="auto">Details</Button>
-                    </Link>
-                </Flex>
-            </Card>
-
-            {/* Chest Coffee Table */}
-            <Card width="300px" height="300" padding={"20px"}>
-                <Image border="2px solid green" width={200} height={200} marginLeft={"auto"} marginRight={"auto"} marginBottom={"10px"}/>
-                <Heading size="md" textAlign="center">Chest Coffee Table</Heading>
-                
-                <Flex marginLeft="auto" marginRight="auto" marginTop="20px">
-                    <Link to="/chest-coffee-table">
-                        <Button size="md" marginTop="auto">Details</Button>
-                    </Link>
-                </Flex>
-            </Card>
-
-            {/* Desert Ladder */}
-            <Card width="300px" height="300" padding={"20px"}>
-                <Image border="2px solid green" width={200} height={200} marginLeft={"auto"} marginRight={"auto"} marginBottom={"10px"}/>
-                <Heading size="md" textAlign="center">Desert Ladder</Heading>
-                
-                <Flex marginLeft="auto" marginRight="auto" marginTop="20px">
-                    <Link to="/desert-ladder">
-                        <Button size="md" marginTop="auto">Details</Button>
-                    </Link>
-                </Flex>
-            </Card>
-        </Flex>
-
-
-        {/* Row 3 */}
-        <Flex
-          direction="row"
-          align="center"
-          justify="center"
-          //minH="40vh"
-          gap="100px"
-          marginBottom="100px"
-        >
-            {/* Memory Ladder */}
-            <Card width="300px" height="300" padding={"20px"}>
-                <Image border="2px solid green" width={200} height={200} marginLeft={"auto"} marginRight={"auto"} marginBottom={"10px"}/>
-                <Heading size="md" textAlign="center">Memory Ladder</Heading>
-                
-                <Flex marginLeft="auto" marginRight="auto" marginTop="20px">
-                    <Link to="/memory-ladder">
-                        <Button size="md" marginTop="auto">Details</Button>
-                    </Link>
-                </Flex>
-            </Card>
-            
-            {/* Order Of Events */}
-            <Card width="300px" height="300" padding={"20px"}>
-                <Image border="2px solid green" width={200} height={200} marginLeft={"auto"} marginRight={"auto"} marginBottom={"10px"}/>
-                <Heading size="md" textAlign="center">Order Of Events</Heading>
-                
-                <Flex marginLeft="auto" marginRight="auto" marginTop="20px">
-                    <Link to="/order-of-events">
-                        <Button size="md" marginTop="auto">Details</Button>
-                    </Link>
-                </Flex>
-            </Card>
-
-            {/* Candle Lanterns */}
-            <Card width="300px" height="300" padding={"20px"}>
-                <Image border="2px solid green" width={200} height={200} marginLeft={"auto"} marginRight={"auto"} marginBottom={"10px"}/>
-                <Heading size="md" textAlign="center">Candle Lanterns</Heading>
-                
-                <Flex marginLeft="auto" marginRight="auto" marginTop="20px">
-                    <Link to="/candle-lanterns">
-                        <Button size="md" marginTop="auto">Details</Button>
-                    </Link>
-                </Flex>
-            </Card>
-        </Flex>
-
-
-        {/* Row 4 */}
-        <Flex
-          direction="row"
-          align="center"
-          justify="center"
-          //minH="40vh"
-          gap="100px"
-          marginBottom="100px"
-        >
-            {/* Decorations */}
-            <Card width="300px" height="300" padding={"20px"}>
-                <Image border="2px solid green" width={200} height={200} marginLeft={"auto"} marginRight={"auto"} marginBottom={"10px"}/>
-                <Heading size="md" textAlign="center">Decorations</Heading>
-                
-                <Flex marginLeft="auto" marginRight="auto" marginTop="20px">
-                    <Link to="/decorations">
-                        <Button size="md" marginTop="auto">Details</Button>
-                    </Link>
-                </Flex>
-            </Card>
-
-            {/* Edison Lights */}
-            <Card width="300px" height="300" padding={"20px"}>
-                <Image border="2px solid green" width={200} height={200} marginLeft={"auto"} marginRight={"auto"} marginBottom={"10px"}/>
-                <Heading size="md" textAlign="center">Edison Lights</Heading>
-                
-                <Flex marginLeft="auto" marginRight="auto" marginTop="20px">
-                    <Link to="/edison-lights">
-                        <Button size="md" marginTop="auto">Details</Button>
-                    </Link>
-                </Flex>
-            </Card>
-
-            {/* Photo Backdrop */}
-            <Card width="300px" height="300" padding={"20px"}>
-                <Image border="2px solid green" width={200} height={200} marginLeft={"auto"} marginRight={"auto"} marginBottom={"10px"}/>
-                <Heading size="md" textAlign="center">Photo Backdrop</Heading>
-                
-                <Flex marginLeft="auto" marginRight="auto" marginTop="20px">
-                    <Link to="/photo-backdrop">
-                        <Button size="md" marginTop="auto">Details</Button>
-                    </Link>
-                </Flex>
-            </Card>
-        </Flex>
-
-
-        {/* Row 5 */}
-        <Flex
-          direction="row"
-          align="center"
-          justify="center"
-          //minH="40vh"
-          gap="100px"
-          marginBottom="100px"
-        >
-            {/* Water Jugs */}
-            <Card width="300px" height="300" padding={"20px"}>
-                <Image border="2px solid green" width={200} height={200} marginLeft={"auto"} marginRight={"auto"} marginBottom={"10px"}/>
-                <Heading size="md" textAlign="center">Water Jugs</Heading>
-                
-                <Flex marginLeft="auto" marginRight="auto" marginTop="20px">
-                    <Link to="/water-jugs">
-                        <Button size="md" marginTop="auto">Details</Button>
-                    </Link>
-                </Flex>
-            </Card>
-
-            {/* Stock Tanks */}
-            <Card width="300px" height="300" padding={"20px"}>
-                <Image border="2px solid green" width={200} height={200} marginLeft={"auto"} marginRight={"auto"} marginBottom={"10px"}/>
-                <Heading size="md" textAlign="center">Stock Tanks</Heading>
-                
-                <Flex marginLeft="auto" marginRight="auto" marginTop="20px">
-                    <Link to="/stock-tanks">
-                        <Button size="md" marginTop="auto">Details</Button>
-                    </Link>
-                </Flex>
-            </Card>
-        </Flex>
-      </Flex>
-
-    </div>
+          ))}
+      </SimpleGrid>
+    </Box>
   );
 }
 

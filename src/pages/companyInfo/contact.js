@@ -29,7 +29,7 @@ function Contact() {
             <Text fontSize="20px" textAlign="center" width="850px">Click the link below to chat with us there. See you soon!</Text>
         </Flex>
 
-        <Link to="https://www.facebook.com/LymanRentals">
+        <Link to="https://www.facebook.com/LymanRentals" target="_blank">
           <Button>Click to Open Facebook</Button>
         </Link>
       </Flex>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './theme/scrollToTop';
 import Layout from './theme/layout';
 import Home from './pages/home';
 import TermsOfService from './pages/legal/termsOfService';
@@ -23,10 +24,10 @@ import WaterJugs from './pages/items/waterJugs';
 import StockTanks from './pages/items/stockTanks';
 
 
-
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />

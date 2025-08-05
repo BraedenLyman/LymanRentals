@@ -1,99 +1,50 @@
-import { Heading, IconButton, HStack } from "@chakra-ui/react";
+import { Heading, HStack, Button, useColorModeValue } from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
 
-function Navigation({ onClose }) {
+function Navigation() {
+    const bg = useColorModeValue('rgba(247, 250, 252, 0.8)', 'rgba(26, 32, 44, 0.8)');
+    const color = useColorModeValue('brand.800', 'white');
+
     return (
     <>
-        <Heading 
-            size="lg" 
-            pb='10' 
+        <Heading
+            as="h1"
+            size="xl"
+            py='6'
             textAlign="center"
             position="sticky"
             top="0"
             zIndex="sticky"
-            backgroundColor="#000"
+            backdropFilter="blur(10px)"
+            bg={bg}
+            fontFamily="Playfair Display"
         >
             Lyman Rentals
         </Heading>
-        <HStack 
-            justifyContent="space-around" 
-            borderBottom="2px solid black"
+        <HStack
+            justifyContent="center"
+            spacing={{ base: 4, md: 8 }}
+            borderBottom="1px solid"
+            borderColor="gray.200"
             position="sticky"
-            top="10"
-            zIndex="sticky" 
-            backgroundColor="#000"
+            top={{ base: "80px", md: "90px" }}
+            zIndex="sticky"
+            backdropFilter="blur(10px)"
+            bg={bg}
+            py={4}
         >
-            <IconButton 
-                as={Link}
-                to="/"
-                aria-label="Home Page"
-                variant="ghost"
-                mb="3"
-                onClick={onClose}
-                _hover={{
-                    transform: 'scale(1.1)',
-                }}
-                _active={{
-                    transform: 'scale(0.95)'
-                }}
-                transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
-            >
-                <Heading size="md">Home</Heading>
-            </IconButton>
-    
-            <IconButton 
-                as={Link}
-                to="/what-we-offer"
-                aria-label="What We Offer Page"
-                variant="ghost"
-                mb="3"
-                onClick={onClose}
-                _hover={{
-                    transform: 'scale(1.1)',
-                }}
-                _active={{
-                    transform: 'scale(0.95)'
-                }}
-                transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
-            >
-                <Heading size="md">What We Offer</Heading>
-            </IconButton>
-
-            <IconButton 
-                as={Link}
-                to="/contact"
-                aria-label="Contact Us Page"
-                variant="ghost"
-                mb="3"
-                onClick={onClose}
-                _hover={{
-                    transform: 'scale(1.1)',
-                }}
-                _active={{
-                    transform: 'scale(0.95)'
-                }}
-                transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
-            >
-                <Heading size="md">Contact Us</Heading>
-            </IconButton>
-
-            <IconButton 
-                as={Link}
-                to="/about"
-                aria-label="About Us Page"
-                variant="ghost"
-                mb="3"
-                onClick={onClose}
-                _hover={{
-                    transform: 'scale(1.1)',
-                }}
-                _active={{
-                    transform: 'scale(0.95)'
-                }}
-                transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
-            >
-                <Heading size="md">About Us</Heading>
-            </IconButton>
+            <Button as={Link} to="/" variant="ghost" color={color} _hover={{ bg: 'gray.200' }}>
+                Home
+            </Button>
+            <Button as={Link} to="/what-we-offer" variant="ghost" color={color} _hover={{ bg: 'gray.200' }}>
+                What We Offer
+            </Button>
+            <Button as={Link} to="/contact" variant="ghost" color={color} _hover={{ bg: 'gray.200' }}>
+                Contact Us
+            </Button>
+            <Button as={Link} to="/about" variant="ghost" color={color} _hover={{ bg: 'gray.200' }}>
+                About Us
+            </Button>
         </HStack>
     </>
   );
