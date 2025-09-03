@@ -5,29 +5,28 @@ function ArchesPage() {
     const archesData = {
         name: "Arches",
         images: [
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
+            "images/4.png",
         ],
-        rentPrice: "$50",
-        rentDuration: "Per Day",
-        pickupLocation: "Our Warehouse",
-        deliveryLocation: "Within 50 miles",
+        rentPrice: "$125 / Unit",
+        rentDuration: "1-2 Days",
+        stock: "2 Units",
+        pickupLocation: "Smitvhille, ON",
+        deliveryLocation: "Hamilton, ON & Surrounding Area",
         qualities: [
         {
         icon: GiWoodBeam,
-        title: "Authentic Materials",
-        description: "Crafted from genuine whiskey barrels for a rustic look.",
+        title: "Stunning Focal Point",
+        description: "Designed to enhance the elegance of your ceremony, making it a perfect backdrop for exchanging vows.",
         },
         {
         icon: GiResize,
-        title: "Perfect Size",
-        description: "Ideal for cocktails, and cake stands.",
+        title: "Crafted With High Quality",
+        description: "Sturdy and reliable, ensuring it stands strong throughout your event.",
         },
         {
         icon: GiSpanner,
-        title: "Sturdy Construction",
-        description: "Built to be durable and stable for any event.",
+        title: "Versatile & Stylish",
+        description: "It is ideal for any occasion, though it shines the brightest at weddings.",
         },
         ],
  };

@@ -5,29 +5,28 @@ function CandleLanterns() {
     const candleLanternsData = {
         name: "Candle Lanterns",
         images: [
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
+            "images/11.png"
         ],
-        rentPrice: "$50",
-        rentDuration: "Per Day",
-        pickupLocation: "Our Warehouse",
-        deliveryLocation: "Within 50 miles",
+        rentPrice: "$10 / Unit",
+        stock: "12 Units",
+        rentDuration: "1-2 Days",
+        pickupLocation: "Smithville, ON",
+        deliveryLocation: "Hamilton, ON & Surrounding Area",
         qualities: [
         {
         icon: GiWoodBeam,
-        title: "Authentic Materials",
-        description: "Crafted from genuine whiskey barrels for a rustic look.",
+        title: "Rustic Wooden Design",
+        description: "The lanterns are crafted from high-quality wood, offering a natural, rustic charm that complements a variety of event themes and settings.",
         },
         {
         icon: GiResize,
-        title: "Perfect Size",
-        description: "Ideal for cocktails, and cake stands.",
+        title: "Elegant Candle Display",
+        description: "Each lantern contains a candle in a glass container, providing a safe and stylish way to illuminate your event with a soft, flickering light.",
         },
         {
         icon: GiSpanner,
-        title: "Sturdy Construction",
-        description: "Built to be durable and stable for any event.",
+        title: "Versatile Décor",
+        description: "Whether used as table centerpieces, aisle decorations, or accent lighting, these lanterns add a touch of warmth and elegance to any event space.",
         },
         ],
  };

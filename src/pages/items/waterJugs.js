@@ -5,29 +5,28 @@ function WaterJugs() {
     const waterJugsData = {
         name: "Water Jugs",
         images: [
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
+            "images/14.png"
         ],
-        rentPrice: "$50",
-        rentDuration: "Per Day",
-        pickupLocation: "Our Warehouse",
-        deliveryLocation: "Within 50 miles",
+        rentPrice: "$3 / Unit",
+        stock: "24 Units",
+        rentDuration: "1-2 Days",
+        pickupLocation: "Smithville, ON",
+        deliveryLocation: "Hamilton, ON & Surrounding Area",
         qualities: [
         {
         icon: GiWoodBeam,
-        title: "Authentic Materials",
-        description: "Crafted from genuine whiskey barrels for a rustic look.",
+        title: "Classic Glass Design",
+        description: "The jugs are made from high-quality glass, offering a clear view of your beverages while adding a touch of sophistication to your drink presentation.",
         },
         {
         icon: GiResize,
-        title: "Perfect Size",
-        description: "Ideal for cocktails, and cake stands.",
+        title: "Vintage-Style Lids",
+        description: "Each jug is topped with a charming old-fashioned lid, providing a nostalgic touch while keeping your drinks fresh and secure.",
         },
         {
         icon: GiSpanner,
-        title: "Sturdy Construction",
-        description: "Built to be durable and stable for any event.",
+        title: "Elegant and Practical",
+        description: "Ideal for serving water, lemonade, or iced tea, these jugs add a stylish, practical element to your event, ensuring that your guests enjoy their refreshments in a refined manner.",
         },
         ],
  };

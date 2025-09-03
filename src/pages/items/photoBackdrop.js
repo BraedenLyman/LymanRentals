@@ -5,29 +5,28 @@ function PhotoBackdrop() {
     const photoBackdropData = {
         name: "Photo Backdrop",
         images: [
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
+            "images/13.png"
         ],
-        rentPrice: "$50",
-        rentDuration: "Per Day",
-        pickupLocation: "Our Warehouse",
-        deliveryLocation: "Within 50 miles",
+        rentPrice: "$40 / Unit",
+        stock: "1 Unit",
+        rentDuration: "1-2 Days",
+        pickupLocation: "Smithville, ON",
+        deliveryLocation: "Hamilton, ON & Surrounding Area",
         qualities: [
         {
         icon: GiWoodBeam,
-        title: "Authentic Materials",
-        description: "Crafted from genuine whiskey barrels for a rustic look.",
+        title: "Elegant Wooden Panels",
+        description: "The backdrop is crafted from high-quality wood, offering a sophisticated and rustic look that complements a variety of event themes and styles.",
         },
         {
         icon: GiResize,
-        title: "Perfect Size",
-        description: "Ideal for cocktails, and cake stands.",
+        title: "Foldable Design",
+        description: "The four-piece structure allows for easy assembly and disassembly, as well as convenient storage and transportation, making it a practical choice for any event.",
         },
         {
         icon: GiSpanner,
-        title: "Sturdy Construction",
-        description: "Built to be durable and stable for any event.",
+        title: "Versatile and Adaptable",
+        description: "The backdrop’s modular design can be arranged in different configurations to fit your space and style, providing a customizable photo setting that enhances your event.",
         },
         ],
  };

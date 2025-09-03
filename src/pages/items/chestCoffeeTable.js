@@ -5,29 +5,28 @@ function ChestCoffeeTable() {
     const chestCoffeeTableData = {
         name: "Chest Coffee Table",
         images: [
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
+            "images/7.png"
         ],
-        rentPrice: "$50",
-        rentDuration: "Per Day",
+        rentPrice: "$50 / Unit",
+        stock: "1 Unit",
+        rentDuration: "1-2 Days",
         pickupLocation: "Our Warehouse",
         deliveryLocation: "Within 50 miles",
         qualities: [
         {
         icon: GiWoodBeam,
-        title: "Authentic Materials",
-        description: "Crafted from genuine whiskey barrels for a rustic look.",
-        },
-        {
-        icon: GiResize,
-        title: "Perfect Size",
-        description: "Ideal for cocktails, and cake stands.",
+        title: "Vintage Charm",
+        description: "The coffee table features an old-fashioned chest design, complete with intricate detailing and a classic finish that adds a sophisticated, nostalgic touch to your event décor.",
         },
         {
         icon: GiSpanner,
         title: "Sturdy Construction",
-        description: "Built to be durable and stable for any event.",
+        description: "Crafted from high-quality materials, the chest offers a solid and reliable surface, ensuring it stands up to the demands of your event while maintaining its classic appearance.",
+        },
+        {
+        icon: GiResize,
+        title: "Versatile Use",
+        description: "Ideal as a coffee table or decorative piece, the chest can be used to display flowers, photos, or other event decor, making it a versatile addition to your event setup.",
         },
         ],
  };

@@ -6,26 +6,35 @@ function Home() {
 
   return (
     <Box>
-      {/* Welcome Section */}
-      <Flex
-        direction="column"
-        align="center"
-        justify="center"
+      <Box
+        position="relative"
         minH="70vh"
-        //bgImage="url('/images/welcome.png')"
-        backgroundColor="#000"
+        bgImage="url('/images/welcome.png')"
         bgSize="cover"
         bgPosition="center"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
         color="white"
-        textShadow="0px 2px 4px rgba(0,0,0,0.5)"
+        textAlign="center"
       >
-        <Heading as="h1" size="4xl" textAlign="center" fontFamily="Playfair Display">
-            Welcome to Lyman Rentals!
-        </Heading>
-        <Text fontSize={{ base: "xl", md: "2xl" }} textAlign="center" mt={4} maxW="container.md">
-            Where your dream events begin with our exquisite rentals.
-        </Text>
-      </Flex>
+        <Box
+          position="absolute"
+          top={0}
+          left={0}
+          right={0}
+          bottom={0}
+          bg="rgba(0,0,0,0.5)" 
+        />
+        <Box position="relative" zIndex={1} px={4}>
+          <Heading as="h1" size="4xl" color="brand.100" textAlign="center" fontFamily="Playfair Display">
+              Welcome to Lyman Rentals!
+          </Heading>
+          <Text fontSize={{ base: "xl", md: "2xl" }} textAlign="center" mt={4} maxW="container.md">
+              Where your dream events begin with our exquisite rentals.
+          </Text>
+        </Box>
+      </Box>
 
       {/* Small Blurb */}
       <Box
@@ -42,45 +51,47 @@ function Home() {
 
       {/* What We Offer Section */}
       <Box as="section" py={{ base: 16, md: 24 }} bg="white">
-        <Heading as="h2" size="2xl" textAlign="center" mb={12} fontFamily="Playfair Display">
+        <Heading as="h2" size="2xl" textAlign="center" mb={12}>
             What We Offer
         </Heading>
+
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} maxW="container.xl" mx="auto">
+
           {/* Whiskey Barrel Tables */}
-          <Card borderWidth="1px" borderRadius="lg" overflow="hidden" _hover={{ shadow: 'lg', transform: 'translateY(-5px)' }} transition="all 0.3s ease">
-              <Image src="/path-to-whiskey-barrel-table-image.jpg" alt="Whiskey Barrel Tables" h="200px" w="full" objectFit="cover" />
+          <Card borderWidth="1px" borderRadius="lg" overflow="hidden" _hover={{ shadow: 'lg', transform: 'translateY(-5px)' }} transition="all 0.3s ease" as={Link} to="/whiskey-barrel-tables">
+              <Image src="/images/1.png" alt="Whiskey Barrel Tables" h="200px" w="full" objectFit="cover" />
               <Box p={6}>
-                  <Heading as="h3" size="lg" textAlign="center" fontFamily="Playfair Display">Whiskey Barrel Tables</Heading>
+                  <Heading as="h3" size="lg" textAlign="center">Whiskey Barrel Tables</Heading>
                   <Flex justify="center" mt={4}>
-                      <Button as={Link} to="/whiskey-barrel-tables" colorScheme="gray" variant="outline">Details</Button>
+                      <Button as={Link} to="/whiskey-barrel-tables" colorScheme="cyan" variant="outline">Details</Button>
                   </Flex>
               </Box>
           </Card>
 
           {/* Benches */}
-          <Card borderWidth="1px" borderRadius="lg" overflow="hidden" _hover={{ shadow: 'lg', transform: 'translateY(-5px)' }} transition="all 0.3s ease">
-              <Image src="/path-to-benches-image.jpg" alt="Benches" h="200px" w="full" objectFit="cover" />
+          <Card borderWidth="1px" borderRadius="lg" overflow="hidden" _hover={{ shadow: 'lg', transform: 'translateY(-5px)' }} transition="all 0.3s ease" as={Link} to="/benches">
+              <Image src="/images/2.png" alt="Benches" h="200px" w="full" objectFit="cover" />
               <Box p={6}>
-                  <Heading as="h3" size="lg" textAlign="center" fontFamily="Playfair Display">Benches</Heading>
+                  <Heading as="h3" size="lg" textAlign="center">Benches</Heading>
                    <Flex justify="center" mt={4}>
-                      <Button as={Link} to="/benches" colorScheme="gray" variant="outline">Details</Button>
+                      <Button as={Link} to="/benches" colorScheme="cyan" variant="outline">Details</Button>
                   </Flex>
               </Box>
           </Card>
 
           {/* Arches */}
-          <Card borderWidth="1px" borderRadius="lg" overflow="hidden" _hover={{ shadow: 'lg', transform: 'translateY(-5px)' }} transition="all 0.3s ease">
-              <Image src="/path-to-arches-image.jpg" alt="Arches" h="200px" w="full" objectFit="cover" />
+          <Card borderWidth="1px" borderRadius="lg" overflow="hidden" _hover={{ shadow: 'lg', transform: 'translateY(-5px)' }} transition="all 0.3s ease" as={Link} to="/arches">
+              <Image src="/images/4.png" alt="Arches" h="200px" w="full" objectFit="cover" />
               <Box p={6}>
                   <Heading as="h3" size="lg" textAlign="center" fontFamily="Playfair Display">Arches</Heading>
                    <Flex justify="center" mt={4}>
-                      <Button as={Link} to="/arches" colorScheme="gray" variant="outline">Details</Button>
+                      <Button as={Link} to="/arches" colorScheme="cyan" variant="outline">Details</Button>
                   </Flex>
               </Box>
           </Card>
         </SimpleGrid>
         <Flex justify="center" mt={12}>
-          <Button as={Link} to="/what-we-offer" size="lg" colorScheme="blue" >
+          <Button as={Link} to="/what-we-offer" size="lg" colorScheme="cyan" >
             And lots more!
           </Button>
         </Flex>

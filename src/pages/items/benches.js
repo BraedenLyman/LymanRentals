@@ -5,29 +5,28 @@ function BenchesPage() {
     const benchesData = {
         name: "Benches",
         images: [
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
+            "images/2.png",
         ],
-        rentPrice: "$50",
-        rentDuration: "Per Day",
-        pickupLocation: "Our Warehouse",
-        deliveryLocation: "Within 50 miles",
+        rentPrice: "$50 / Unit",
+        stock: "6 Units",
+        rentDuration: "1-2 Days",
+        pickupLocation: "Smithville, ON",
+        deliveryLocation: "Hamilton, ON & Surrounding Area",
         qualities: [
         {
         icon: GiWoodBeam,
-        title: "Authentic Materials",
-        description: "Crafted from genuine whiskey barrels for a rustic look.",
+        title: "Timeless Aesthetic",
+        description: "Seamlessly fits with various themes and event styles, making it a practical and beautiful choice for any occasion.",
         },
         {
         icon: GiResize,
-        title: "Perfect Size",
-        description: "Ideal for cocktails, and cake stands.",
+        title: "Spacious",
+        description: "Offers ample seating, accommodating multiple guests comfortably",
         },
         {
         icon: GiSpanner,
-        title: "Sturdy Construction",
-        description: "Built to be durable and stable for any event.",
+        title: "High Quality & Durable",
+        description: "Withstands the rigors of event use, ensuring it remains sturdy and reliable",
         },
         ],
  };

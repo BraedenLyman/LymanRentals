@@ -2,7 +2,7 @@ import { Box, Flex, Heading, Text, Image, VStack, HStack, Icon, Divider} from "@
 import { FaTag, FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 function OfferingsPageTemplate({ item }) {
-    const { name, images, rentPrice, rentDuration, pickupLocation, deliveryLocation, qualities } = item;
+    const { name, images, rentPrice, stock, rentDuration, pickupLocation, deliveryLocation, qualities } = item;
 
     return (
         <Box p={8}>
@@ -10,8 +10,7 @@ function OfferingsPageTemplate({ item }) {
                 <Heading as="h1" size="2xl" textAlign="center">
                     {name}
                 </Heading>
-
-                <Flex direction={{ base: "column", md: "row" }} gap={8}>
+                <Flex justifyContent="center" mb="10" gap={8}>
                     {images.map((src, index) => (
                         <Image
                             key={index}
@@ -23,47 +22,61 @@ function OfferingsPageTemplate({ item }) {
                         />
                     ))}
                 </Flex>
-                <Divider />
+                <Flex direction={{ base: "column", md: "row" }} justifyContent="space-evenly" gap={8}>
 
-                <Flex
-                    direction={{ base: "column", md: "row" }}
-                    justify="space-between"
-                    gap={8}
-                >
-                    <VStack align="start" spacing={4}>
+                    <VStack align="start" justifyContent="center" spacing={10}>
                         <HStack>
-                            <Icon as={FaTag} w={6} h={6} color="green.500" />
-                            <Text fontSize="xl" fontWeight="bold">
-                                Rent Price:
-                            </Text>
+                            <HStack>
+                                <Icon as={FaTag} w={6} h={6} color="green.500" />
+                                <Text fontSize="xl" fontWeight="bold">
+                                    Rent Price:
+                                </Text>
+                            </HStack>
                             <Text fontSize="xl">{rentPrice}</Text>
                         </HStack>
                         <HStack>
-                            <Icon as={FaCalendarAlt} w={6} h={6} color="green.500" />
-                            <Text fontSize="xl" fontWeight="bold">
-                                Rent Duration:
-                            </Text>
+                            <HStack>
+                                <Icon as={FaTag} w={6} h={6} color="green.500" />
+                                <Text fontSize="xl" fontWeight="bold">
+                                    Stock: 
+                                </Text>
+                            </HStack>
+                            <Text fontSize="xl">{stock}</Text>
+                        </HStack>
+                        <HStack>
+                            <HStack>
+                                <Icon as={FaCalendarAlt} w={6} h={6} color="green.500" />
+                                <Text fontSize="xl" fontWeight="bold">
+                                    Rent Duration:
+                                </Text>
+                            </HStack>
                             <Text fontSize="xl">{rentDuration}</Text>
                         </HStack>
                     </VStack>
-                    
-                    <VStack align="start" spacing={4}>
+
+                    <VStack align="start" justifyContent="center" spacing={10}>
                         <HStack>
-                            <Icon as={FaMapMarkerAlt} w={6} h={6} color="orange.500" />
-                            <Text fontSize="xl" fontWeight="bold">
-                                Pickup Location:
-                            </Text>
+                            <HStack>
+                                <Icon as={FaMapMarkerAlt} w={6} h={6} color="orange.500" />
+                                <Text fontSize="xl" fontWeight="bold">
+                                    Pickup Location:
+                                </Text>
+                            </HStack>
                             <Text fontSize="xl">{pickupLocation}</Text>
                         </HStack>
+
                         <HStack>
-                            <Icon as={FaMapMarkerAlt} w={6} h={6} color="orange.500" />
-                            <Text fontSize="xl" fontWeight="bold">
-                                Delivery Location:
-                            </Text>
+                            <HStack>
+                                <Icon as={FaMapMarkerAlt} w={6} h={6} color="orange.500" />
+                                <Text fontSize="xl" fontWeight="bold">
+                                    Delivery Location:
+                                </Text>
+                            </HStack>
                             <Text fontSize="xl">{deliveryLocation}</Text>
                         </HStack>
                     </VStack>
                 </Flex>
+
                 <Divider />
 
                 <VStack spacing={8} align="stretch">

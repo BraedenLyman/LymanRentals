@@ -5,29 +5,29 @@ function StockTanks() {
     const stockTanksData = {
         name: "Stock Tanks",
         images: [
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
+            "images/15.png",
+            "images/16.png"
         ],
-        rentPrice: "$50",
-        rentDuration: "Per Day",
-        pickupLocation: "Our Warehouse",
-        deliveryLocation: "Within 50 miles",
+        rentPrice: "$50 / Unit",
+        stock: "2 Units",
+        rentDuration: "1-2 Days",
+        pickupLocation: "Smithville, On",
+        deliveryLocation: "Hamilton, ON & Surrounding Area",
         qualities: [
         {
         icon: GiWoodBeam,
-        title: "Authentic Materials",
-        description: "Crafted from genuine whiskey barrels for a rustic look.",
+        title: "Robust Steel Construction",
+        description: "Made from high-quality steel, these stock tanks are built to last, offering both durability and a sleek, industrial look that complements any event setting.",
         },
         {
         icon: GiResize,
-        title: "Perfect Size",
-        description: "Ideal for cocktails, and cake stands.",
+        title: "Spacious and Functional",
+        description: "With ample capacity, these tanks can hold a large quantity of ice and drinks, making them ideal for keeping multiple beverages cold and easily accessible for your guests.",
         },
         {
         icon: GiSpanner,
-        title: "Sturdy Construction",
-        description: "Built to be durable and stable for any event.",
+        title: "Versatile Use",
+        description: "Perfect for outdoor events or indoor gatherings, the steel stock tanks provide a practical solution for beverage cooling, enhancing your event with both style and functionality.",
         },
         ],
  };

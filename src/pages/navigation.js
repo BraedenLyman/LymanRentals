@@ -17,7 +17,7 @@ function Navigation() {
             zIndex="sticky"
             backdropFilter="blur(10px)"
             bg={bg}
-            fontFamily="Playfair Display"
+            color="brand.100"
         >
             Lyman Rentals
         </Heading>
@@ -33,16 +33,16 @@ function Navigation() {
             bg={bg}
             py={4}
         >
-            <Button as={Link} to="/" variant="ghost" color={color} _hover={{ bg: 'gray.200' }}>
+            <Button as={Link} to="/" variant="ghost" color={color} _hover={{ bg: 'brand.800' }}>
                 Home
             </Button>
-            <Button as={Link} to="/what-we-offer" variant="ghost" color={color} _hover={{ bg: 'gray.200' }}>
+            <Button as={Link} to="/what-we-offer" variant="ghost" color={color} _hover={{ bg: 'brand.800' }}>
                 What We Offer
             </Button>
-            <Button as={Link} to="/contact" variant="ghost" color={color} _hover={{ bg: 'gray.200' }}>
+            <Button as={Link} to="/contact" variant="ghost" color={color} _hover={{ bg: 'brand.800' }}>
                 Contact Us
             </Button>
-            <Button as={Link} to="/about" variant="ghost" color={color} _hover={{ bg: 'gray.200' }}>
+            <Button as={Link} to="/about" variant="ghost" color={color} _hover={{ bg: 'brand.800' }}>
                 About Us
             </Button>
         </HStack>

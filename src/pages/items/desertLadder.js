@@ -5,29 +5,28 @@ function DeserLadder() {
     const desertLadderData = {
         name: "Desert Ladder",
         images: [
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
+            "images/8.png"
         ],
-        rentPrice: "$50",
-        rentDuration: "Per Day",
-        pickupLocation: "Our Warehouse",
-        deliveryLocation: "Within 50 miles",
+        rentPrice: "$40 / Unit",
+        stock: "1 Unit",
+        rentDuration: "1-2 Days",
+        pickupLocation: "Smithville, ON",
+        deliveryLocation: "Hamilton, ON & Surrounding Area",
         qualities: [
         {
         icon: GiWoodBeam,
-        title: "Authentic Materials",
-        description: "Crafted from genuine whiskey barrels for a rustic look.",
+        title: "Multi-Tiered Display",
+        description: "With multiple shelves, the Dessert Ladder offers ample space to showcase a variety of desserts, allowing you to create an eye-catching and organized presentation.",
         },
         {
         icon: GiResize,
-        title: "Perfect Size",
-        description: "Ideal for cocktails, and cake stands.",
+        title: "Versatile and Portable",
+        description: "Easy to set up and move, this ladder can be placed anywhere in your venue, making it a versatile addition to your event décor.",
         },
         {
         icon: GiSpanner,
-        title: "Sturdy Construction",
-        description: "Built to be durable and stable for any event.",
+        title: "Charming Rustic Design",
+        description: "The wooden ladder exudes a rustic, vintage charm that complements any event theme, adding a cozy and welcoming touch to your dessert display.",
         },
         ],
  };

@@ -5,29 +5,28 @@ function OrderOfEvents() {
     const orderOfEventsData = {
         name: "Order Of Events",
         images: [
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
+            "images/10.png"
         ],
-        rentPrice: "$50",
-        rentDuration: "Per Day",
-        pickupLocation: "Our Warehouse",
-        deliveryLocation: "Within 50 miles",
+        rentPrice: "$75 / Unit (Includes custom vinyl lettering)",
+        stock: "1 Unit",
+        rentDuration: "1-2 Days",
+        pickupLocation: "Smithville, ON",
+        deliveryLocation: "Hamilton, ON & Surrounding Area",
         qualities: [
         {
         icon: GiWoodBeam,
-        title: "Authentic Materials",
-        description: "Crafted from genuine whiskey barrels for a rustic look.",
+        title: "Customizable Layout",
+        description: "Simply provide us with your order of events and preferred font style, and we'll handle the rest, creating a stunning schedule display that ensures your day flows seamlessly and looks fantastic.",
         },
         {
         icon: GiResize,
-        title: "Perfect Size",
-        description: "Ideal for cocktails, and cake stands.",
+        title: "Clear and Organized Display",
+        description: "The pallet design provides ample space to clearly list your event's schedule, helping guests stay informed and on time throughout the day.",
         },
         {
         icon: GiSpanner,
-        title: "Sturdy Construction",
-        description: "Built to be durable and stable for any event.",
+        title: "Rustic Aesthetic",
+        description: "Crafted from natural wood, this pallet list adds a warm, rustic feel to your event décor, complementing a variety of themes and settings.",
         },
         ],
  };

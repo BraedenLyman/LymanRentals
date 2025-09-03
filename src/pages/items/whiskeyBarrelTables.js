@@ -5,29 +5,28 @@ function WhiskeyBarrelTablePage() {
     const whiskeyBarrelTableData = {
         name: "Whiskey Barrel Table",
         images: [
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
+            "images/1.png",
         ],
-        rentPrice: "$50",
-        rentDuration: "Per Day",
-        pickupLocation: "Our Warehouse",
-        deliveryLocation: "Within 50 miles",
+        rentPrice: "$75 / Unit (Stools: Extra $5 / Stool)",
+        stock: "4 Units",
+        rentDuration: "1-2 Days",
+        pickupLocation: "Smithville, ON",
+        deliveryLocation: "Hamilton, ON & Surrounding Area",
         qualities: [
         {
         icon: GiWoodBeam,
-        title: "Authentic Materials",
-        description: "Crafted from genuine whiskey barrels for a rustic look.",
+        title: "Charming & Rustic Look",
+        description: "Creates the perfect gathering spot for guest to chat and enjoy their meals",
         },
         {
         icon: GiResize,
-        title: "Perfect Size",
-        description: "Ideal for cocktails, and cake stands.",
+        title: "Authentic",
+        description: "Adds a touch of vintage elegance, making it an ideal centerpiece for any celebration",
         },
         {
         icon: GiSpanner,
-        title: "Sturdy Construction",
-        description: "Built to be durable and stable for any event.",
+        title: "Sturdy & Spacious",
+        description: "Provides ample room for drinks and appetizers",
         },
         ],
  };

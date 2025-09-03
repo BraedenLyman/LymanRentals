@@ -5,29 +5,28 @@ function WhiskeyBarrelBarPage() {
     const whiskeyBarrelBarData = {
         name: "Whiskey Barrel Bar",
         images: [
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
+            "images/6.png"
         ],
-        rentPrice: "$50",
-        rentDuration: "Per Day",
-        pickupLocation: "Our Warehouse",
-        deliveryLocation: "Within 50 miles",
+        rentPrice: "$150 / Unit",
+        stock: "1 Unit",
+        rentDuration: "1-2 Days",
+        pickupLocation: "Smitvhille, ON",
+        deliveryLocation: "Hamilton, ON & Surrounding Area",
         qualities: [
         {
         icon: GiWoodBeam,
-        title: "Authentic Materials",
-        description: "Crafted from genuine whiskey barrels for a rustic look.",
+        title: "Authentic Craftsmanship",
+        description: "Built with genuine whiskey barrels, this bar brings a rich, rustic feel to your event, embodying both style and durability.",
         },
         {
         icon: GiResize,
-        title: "Perfect Size",
-        description: "Ideal for cocktails, and cake stands.",
+        title: "Versatile Design",
+        description: "Whether you're hosting a wedding, reception, or corporate event, the Whiskey Barrel Bar seamlessly blends with various themes and settings, making it a standout piece.",
         },
         {
         icon: GiSpanner,
-        title: "Sturdy Construction",
-        description: "Built to be durable and stable for any event.",
+        title: "Sturdy and Spacious",
+        description: "With a solid wood top, this bar provides ample space for bartending needs or showcasing your event's finest offerings, all while ensuring stability throughout your celebration.",
         },
         ],
  };
