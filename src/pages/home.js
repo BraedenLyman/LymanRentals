@@ -17,6 +17,8 @@ function Home() {
         justifyContent="center"
         color="white"
         textAlign="center"
+        borderRadius="2xl"
+        overflow="hidden"
       >
         <Box
           position="absolute"
@@ -27,10 +29,10 @@ function Home() {
           bg="rgba(0,0,0,0.5)" 
         />
         <Box position="relative" zIndex={1} px={4}>
-          <Heading as="h1" size="4xl" color="brand.100" textAlign="center" fontFamily="Playfair Display">
+          <Heading as="h1" size="4xl" color="brand.100" textAlign="center">
               Welcome to Lyman Rentals!
           </Heading>
-          <Text fontSize={{ base: "xl", md: "2xl" }} textAlign="center" mt={4} maxW="container.md">
+          <Text fontSize={{ base: "xl", md: "2xl" }} textAlign="center" mt={4} >
               Where your dream events begin with our exquisite rentals.
           </Text>
         </Box>
