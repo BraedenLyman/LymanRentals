@@ -471,7 +471,7 @@ const LymanRentalsApp = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="home" style={{
+      <section id="home" className="hero-section" style={{
         marginTop: '90px',
         background: 'linear-gradient(rgba(255, 255, 255, 0.2), rgba(253, 251, 247)), url(https://images.unsplash.com/photo-1519741497674-611481863552?w=1600) center/cover',
         textAlign: 'center',
@@ -488,7 +488,7 @@ const LymanRentalsApp = () => {
           opacity: 0.6
         }}>♦</div>
 
-        <h1 style={{
+        <h1 className="hero-title" style={{
           fontSize: '4rem',
           marginBottom: '1.5rem',
           color: '#8b7355',
@@ -504,7 +504,7 @@ const LymanRentalsApp = () => {
           margin: '2rem auto'
         }} />
 
-        <p style={{
+        <p className="hero-text" style={{
           fontSize: '1.4rem',
           marginBottom: '0.8rem',
           maxWidth: '800px',
@@ -513,7 +513,7 @@ const LymanRentalsApp = () => {
           color: '#6b5d4f',
           fontWeight: 300
         }}>Where your dream events begin with our exquisite rentals</p>
-        <p style={{
+        <p className="hero-text" style={{
           fontSize: '1.4rem',
           maxWidth: '800px',
           marginLeft: 'auto',
@@ -559,7 +559,7 @@ const LymanRentalsApp = () => {
             fontWeight: 300
           }}>Handpicked pieces for your perfect day</p>
 
-          <div style={{
+          <div className="products-grid" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
             gap: '2.5rem',
@@ -644,7 +644,7 @@ const LymanRentalsApp = () => {
 
         {/* Contact Section */}
         <section id="contact" style={{ marginBottom: '6rem' }}>
-          <div style={{
+          <div className="contact-box" style={{
             background: 'linear-gradient(135deg, #8b7355 0%, #a08968 100%)',
             color: 'white',
             padding: '4rem',
@@ -823,9 +823,9 @@ const LymanRentalsApp = () => {
             {/* Modal Content */}
             <div style={{ padding: '3rem'}}>
               {/* Product Image Gallery */}
-              <div style={{
+              <div className="modal-image-container" style={{
                 width: '80%',
-               
+
                 background: 'linear-gradient(135deg, #f0e9e0, #e8ddd0)',
                 borderRadius: '10px',
                 display: 'flex',
@@ -994,7 +994,7 @@ const LymanRentalsApp = () => {
               }} />
 
               {/* Info Grid */}
-              <div style={{
+              <div className="modal-info-grid" style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
                 gap: '1.5rem',
@@ -1176,6 +1176,74 @@ const LymanRentalsApp = () => {
           }
           .mobile-nav {
             display: flex !important;
+          }
+
+          /* Hero Section Mobile */
+          .hero-section {
+            padding: 5rem 1.5rem 4rem !important;
+          }
+
+          .hero-title {
+            font-size: 2.5rem !important;
+          }
+
+          .hero-text {
+            font-size: 1.1rem !important;
+            padding: 0 0.5rem;
+          }
+
+          /* Products Grid Mobile */
+          .products-grid {
+            grid-template-columns: 1fr !important;
+            gap: 1.5rem !important;
+            padding: 0 0.5rem;
+          }
+
+          /* Contact Box Mobile */
+          .contact-box {
+            padding: 2.5rem 1.5rem !important;
+          }
+
+          .contact-box h2 {
+            font-size: 2rem !important;
+          }
+
+          .contact-box p {
+            font-size: 1rem !important;
+          }
+
+          /* Modal Mobile Improvements */
+          .modal-content {
+            margin: 1rem !important;
+            max-height: 95vh !important;
+          }
+
+          .modal-content > div {
+            padding: 2rem 1.5rem !important;
+          }
+
+          .modal-image-container {
+            width: 100% !important;
+          }
+
+          .modal-info-grid {
+            grid-template-columns: 1fr !important;
+            padding: 1.5rem !important;
+          }
+
+          /* Better touch targets */
+          button, a {
+            min-height: 44px;
+            min-width: 44px;
+          }
+
+          /* Adjust font sizes in modal */
+          .modal-content h2 {
+            font-size: 2rem !important;
+          }
+
+          .modal-content h3 {
+            font-size: 1.3rem !important;
           }
         }
       `}</style>
