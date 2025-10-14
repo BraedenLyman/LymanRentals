@@ -473,7 +473,7 @@ const LymanRentalsApp = () => {
       {/* Hero Section */}
       <section id="home" style={{
         marginTop: '90px',
-        background: 'linear-gradient(rgba(255, 255, 255, 0.85), rgba(253, 251, 247, 0.9)), url(https://images.unsplash.com/photo-1519741497674-611481863552?w=1600) center/cover',
+        background: 'linear-gradient(rgba(255, 255, 255, 0.2), rgba(253, 251, 247)), url(https://images.unsplash.com/photo-1519741497674-611481863552?w=1600) center/cover',
         textAlign: 'center',
         padding: '10rem 2rem 8rem',
         position: 'relative'
