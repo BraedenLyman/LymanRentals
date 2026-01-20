@@ -57,15 +57,15 @@ To run the project locally:
    ```bash
    git clone https://github.com/BraedenLyman/LymanRentals.git
 
-2. Navigate to the the project folder
+2. Navigate to the project folder
    ```bash
    cd lymanrentals
    
-4. Inside the project folder install the project's packages
+3. Inside the project folder install the project's packages
    ```bash
    npm install
    
-5. Start the local server
+4. Start the local server
    ```bash
    npm start
 
@@ -80,8 +80,7 @@ This website is designed to:
 
 ## Author
 
-Braeden Lyman  
-Developer  
-Website: https://braedenlyman.ca  
-GitHub: https://github.com/BraedenLyman  
-LinkedIn: https://www.linkedin.com/in/braedenlyman/
+Braeden Lyman  - Developer  
+<div align="center">
+   Website: https://braedenlyman.ca  | GitHub: https://github.com/BraedenLyman  | LinkedIn: https://www.linkedin.com/in/braedenlyman/
+</div>
