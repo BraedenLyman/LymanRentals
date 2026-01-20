@@ -1,6 +1,25 @@
-# Lyman Rentals Website
+<div align="center">
+   
+   # Lyman Rentals Website  
 
-A modern, responsive website for **Lyman Rentals**, an event rental business specializing in wedding and special event décor such as arches, benches, whiskey barrels, and memory ladders. The site showcases available rental items, business information, and provides an easy way for customers to explore services and make inquiries.
+</div>
+
+</br>
+</br>
+
+<div align="center">
+   A modern, responsive website for Lyman Rentals, an event rental business specializing in wedding and special event décor such as arches, benches, whiskey barrels, and memory ladders. The site showcases available rental items, business information, and provides an easy    way for customers to explore services and make inquiries.
+</div>
+
+</br>
+</br>
+
+<div align="center">
+    <img src="https://skillicons.dev/icons?i=react,js,html,css,nodejs,github" />
+</div>
+
+</br>
+</br>
 
 ## Demo
 
@@ -17,21 +36,20 @@ Live Site: https://www.lymanrentals.ca/
 - Professional styling using Chakra UI and Radix UI  
 
 ## Tech Stack
-
-- React 18  
-- JavaScript (ES6+)  
-- HTML5  
-- CSS3  
-- Create React App (react-scripts)  
-- Chakra UI  
-- Radix UI Themes  
-- Framer Motion (animations)  
-- React Router DOM (routing)  
-- Lucide React & React Icons (icons)
-- Node.js (development environment)
+```json
+{
+  "frontend": ["React 18", "JavaScript (ES6+)", "HTML5", "CSS3"],
+  "ui": ["Chakra UI", "Radix UI Themes"],
+  "routing": ["React Router DOM"],
+  "animation": ["Framer Motion"],
+  "icons": ["Lucide React", "React Icons"],
+  "tooling": ["Create React App"],
+  "runtime": ["Node.js"]
+}
+```
 
 ## Installation
-**Before running the project locally make sure you have Node.js version 16 or higher installed on your computer**
+> Before running the project locally make sure you have Node.js version 16 or higher installed on your computer
 
 To run the project locally:
 
