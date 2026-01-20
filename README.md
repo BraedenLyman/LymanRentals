@@ -28,7 +28,6 @@ Live Site: https://www.lymanrentals.ca/
 - Framer Motion (animations)  
 - React Router DOM (routing)  
 - Lucide React & React Icons (icons)
--  
 - Node.js (development environment)
 
 ## Installation
