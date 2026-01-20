@@ -35,7 +35,7 @@ Live Site: https://www.lymanrentals.ca/
 
 To run the project locally:
 
-1. Clone the repository (Using Command Line)
+1. Clone the repository
    ```bash
    git clone https://github.com/BraedenLyman/LymanRentals.git
 
