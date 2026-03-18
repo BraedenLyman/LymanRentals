@@ -36,7 +36,7 @@ function ProductDetail() {
     <div className="site-shell">
       <SiteHeader />
       <main className="page-main">
-        <section className="section page-intro compact-bottom detail-page-intro">
+        <section className="section page-intro compact-bottom detail-page-intro reveal-on-scroll">
           <div className="container detail-header">
             <div>
               <p className="eyebrow">{product.category}</p>
@@ -46,9 +46,9 @@ function ProductDetail() {
           </div>
         </section>
 
-        <section className="section compact-top">
+        <section className="section compact-top reveal-on-scroll">
           <div className="container detail-bottom-grid">
-            <div className="detail-gallery">
+            <div className="detail-gallery reveal-on-scroll">
               <div className="detail-image-wrap">
                 <img src={product.images?.[currentImageIndex] || product.image} alt={product.name} />
                 {product.images && product.images.length > 1 && (
@@ -75,7 +75,7 @@ function ProductDetail() {
             </div>
 
             <div className="detail-side-stack">
-              <div className="detail-price-actions">
+              <div className="detail-price-actions reveal-on-scroll">
                 <div className="detail-price-panel">
                   <div className="detail-price-row">
                     <p className="modal-price">{product.price}</p>
@@ -88,7 +88,7 @@ function ProductDetail() {
                 </div>
               </div>
 
-              <div className="detail-characteristics-card detail-info-rows">
+              <div className="detail-characteristics-card detail-info-rows reveal-on-scroll">
                 <p>
                   <strong className="detail-label">Duration</strong>
                   <span className="detail-value">{product.duration}</span>
@@ -104,7 +104,7 @@ function ProductDetail() {
                 </p>
               </div>
 
-              <div className="detail-features detail-characteristics-card">
+              <div className="detail-features detail-characteristics-card reveal-on-scroll">
                 <div className="detail-features-list">
                   {product.features.map((feature) => (
                     <article key={feature.title}>
@@ -117,7 +117,7 @@ function ProductDetail() {
             </div>
           </div>
 
-          <div className="container detail-page-footer">
+          <div className="container detail-page-footer reveal-on-scroll">
             <Link to="/products" className="btn btn-secondary detail-back-bottom">
               Back to Products
             </Link>

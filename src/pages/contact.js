@@ -8,7 +8,7 @@ function Contact() {
     <div className="site-shell">
       <SiteHeader />
       <main className="page-main">
-        <section className="section page-intro">
+        <section className="section page-intro reveal-on-scroll">
           <div className="container contact-simple-wrap">
             <p className="eyebrow">Contact & Booking</p>
             <h1 className="page-title">Ready to bring your vision to life? Let&apos;s start planning your perfect day.</h1>

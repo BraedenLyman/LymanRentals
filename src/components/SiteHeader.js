@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 
@@ -10,11 +10,37 @@ const navItems = [
 
 function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [headerIsScrolled, setHeaderIsScrolled] = useState(false);
 
   const closeMenu = () => setMobileMenuOpen(false);
 
+  useEffect(() => {
+    let ticking = false;
+
+    const updateHeaderState = () => {
+      setHeaderIsScrolled(window.scrollY > 8);
+      ticking = false;
+    };
+
+    const handleScroll = () => {
+      if (ticking) {
+        return;
+      }
+
+      ticking = true;
+      window.requestAnimationFrame(updateHeaderState);
+    };
+
+    updateHeaderState();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="site-header">
+    <header className={`site-header ${headerIsScrolled ? 'is-scrolled' : ''}`}>
       <div className="container nav-wrap">
         <NavLink className="brand" to="/" onClick={closeMenu}>
           <span className="brand-mark">Lyman Rentals</span>
