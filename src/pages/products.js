@@ -10,7 +10,7 @@ function Products() {
     <div className="site-shell">
       <SiteHeader />
       <main className="page-main">
-        <section className="section page-intro reveal-on-scroll">
+        <section className="section page-intro">
           <div className="container">
             <p className="eyebrow">Product Collection</p>
             <h1 className="page-title">Browse all of our inventory.</h1>
@@ -18,11 +18,11 @@ function Products() {
           </div>
         </section>
 
-        <section className="section rentals-section compact-top reveal-on-scroll">
+        <section className="section rentals-section compact-top">
           <div className="container">
             <div className="rental-grid">
               {products.map((product) => (
-                <article key={product.id} className="rental-card reveal-on-scroll">
+                <article key={product.id} className="rental-card">
                   <Link to={`/products/${product.slug}`} className="product-link-wrap" aria-label={`Open product page for ${product.name}`}>
                     <div className="rental-image-wrap">
                       <img src={product.image} alt={product.name} loading="lazy" />
@@ -40,7 +40,7 @@ function Products() {
               ))}
             </div>
 
-            <div className="products-cta reveal-on-scroll">
+            <div className="products-cta">
               <h3>Ready to reserve your favorites?</h3>
               <p>Message us on Facebook to inquire about availability and any additional information.</p>
               <a

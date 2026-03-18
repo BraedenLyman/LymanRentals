@@ -59,7 +59,7 @@ function Home() {
       <main>
         <section
           id="home"
-          className="hero reveal-on-scroll"
+          className="hero"
           style={{
             backgroundImage: `linear-gradient(rgba(27, 18, 10, 0.42), rgba(27, 18, 10, 0.1)), url(${process.env.PUBLIC_URL}/images/welcome.png)`
           }}
@@ -82,7 +82,7 @@ function Home() {
           </div>
         </section>
 
-        <section id="about" className="section about reveal-on-scroll">
+        <section id="about" className="section about">
           <div className="container about-grid">
             <div>
               <p className="eyebrow">Why Couples Choose Us</p>
@@ -108,7 +108,7 @@ function Home() {
           </div>
         </section>
 
-        <section className="section rentals-section reveal-on-scroll">
+        <section className="section rentals-section">
           <div className="container">
             <div className="rentals-head">
               <div>
@@ -119,7 +119,7 @@ function Home() {
 
             <div className="rental-grid">
               {featuredProducts.map((product) => (
-                <article key={product.id} className="rental-card reveal-on-scroll">
+                <article key={product.id} className="rental-card">
                   <div className="rental-image-wrap">
                     <img src={product.image} alt={product.name} loading="lazy" />
                     <span className="tag">{product.category}</span>
@@ -141,7 +141,7 @@ function Home() {
           </div>
         </section>
 
-        <section id="how-it-works" className="section process-section reveal-on-scroll">
+        <section id="how-it-works" className="section process-section">
           <div className="container">
             <p className="eyebrow">How It Works</p>
             <h2>A simple process from first message to event day.</h2>
@@ -149,7 +149,7 @@ function Home() {
               {processSteps.map((step, index) => {
                 const Icon = step.icon;
                 return (
-                  <article key={step.title} className="process-card reveal-on-scroll">
+                  <article key={step.title} className="process-card">
                     <span className="step-index">0{index + 1}</span>
                     <div className="process-head">
                       <Icon size={20} />
@@ -163,13 +163,13 @@ function Home() {
           </div>
         </section>
 
-        <section className="section testimonial-section reveal-on-scroll">
+        <section className="section testimonial-section">
           <div className="container">
             <p className="eyebrow">Client Feedback</p>
             <h2>Trusted by couples.</h2>
             <div className="testimonial-grid">
               {testimonials.map((testimonial) => (
-                <article key={testimonial.author} className="reveal-on-scroll">
+                <article key={testimonial.author}>
                   <p>“{testimonial.quote}”</p>
                   <span>{testimonial.author}</span>
                 </article>
@@ -178,7 +178,7 @@ function Home() {
           </div>
         </section>
 
-        <section className="section contact-section reveal-on-scroll">
+        <section className="section contact-section">
           <div className="container contact-wrap">
             <div>
               <p className="eyebrow">Ready To Book?</p>
