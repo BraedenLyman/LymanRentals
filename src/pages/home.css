@@ -1259,6 +1259,10 @@ p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .hero-content {
+    text-align: center;
+  }
+
   .category-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1328,6 +1332,7 @@ p {
   .feature-card .feature-list {
     grid-template-columns: 1fr;
   }
+
 }
 
 @media (max-width: 600px) {
@@ -1376,5 +1381,58 @@ p {
   .modal-cta {
     width: 100%;
     justify-self: stretch;
+  }
+
+   .about {
+    text-align: center;
+  }
+
+  .rentals-section {
+    text-align: center;
+  }
+
+  .featured-products-footer {
+    justify-content: center;
+  }
+  
+  .process-section {
+    text-align: center;
+  }
+
+  .process-head {
+    justify-content: center;
+  }
+
+  .testimonial-section {
+    text-align: center;
+  }
+
+  .page-intro {
+    text-align: center;
+  }
+
+  .contact-section {
+    text-align: center;
+  }
+
+  .contact-compact-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .detail-info-rows p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .detail-value {
+    font-size: 14px;
+  }
+
+  .detail-delivery {
+    max-width: 65%;
+    text-align: end;
   }
 }

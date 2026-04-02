@@ -99,8 +99,7 @@ function ProductDetail() {
                 </p>
                 <p>
                   <strong className="detail-label">Delivery</strong>
-                  <span className="detail-value">{product.delivery}</span>
-                  <span className="note detail-fee-note">*Additional fee applies.</span>
+                  <span className="detail-value detail-delivery">{product.delivery}</span>
                 </p>
               </div>
 

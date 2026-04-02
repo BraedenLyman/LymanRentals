@@ -13,7 +13,7 @@ export const products = [
     stock: '4 Units',
     duration: '1-2 Days',
     pickup: 'Smithville, Ontario',
-    delivery: 'Hamilton, Ontario & Surrounding Area',
+    delivery: 'Hamilton, Ontario & Surrounding Area *Additional fees may apply*',
     features: [
       { title: 'Authentic character', desc: 'Adds warmth and texture to modern or rustic wedding themes.' },
       { title: 'Guest friendly', desc: 'Great standing height for mingling, drinks, and hors d’oeuvres.' },
@@ -32,7 +32,7 @@ export const products = [
     description: 'Create a standout beverage station with a whiskey barrel bar that feels both elevated and welcoming.',
     duration: '1-2 Days',
     pickup: 'Smithville, Ontario',
-    delivery: 'Hamilton, Ontario & Surrounding Area',
+    delivery: 'Hamilton, Ontario & Surrounding Area *Additional fees may apply*',
     features: [
       { title: 'Statement setup', desc: 'Adds instant personality to reception and cocktail areas.' },
       { title: 'Rustic-luxury style', desc: 'Authentic barrel base with polished event-ready presentation.' },
@@ -51,7 +51,7 @@ export const products = [
     description: 'Display treasured photos and milestone moments with a vintage-inspired memory ladder.',
     duration: '1-2 Days',
     pickup: 'Smithville, Ontario',
-    delivery: 'Hamilton, Ontario & Surrounding Area',
+    delivery: 'Hamilton, Ontario & Surrounding Area *Additional fees may apply*',
     features: [
       { title: 'Storytelling piece', desc: 'Showcase engagement photos, family memories, and milestones.' },
       { title: 'Simple styling', desc: 'Easy to personalize with clips, twine, ribbon, and florals.' },
@@ -71,7 +71,7 @@ export const products = [
     description: 'Customized decor elements designed to fit your venue, style, and celebration vision.',
     duration: '1-2 Days',
     pickup: 'Smithville, Ontario',
-    delivery: 'Hamilton, Ontario & Surrounding Area',
+    delivery: 'Hamilton, Ontario & Surrounding Area *Additional fees may apply*',
     features: [
       { title: 'Tailored for your event', desc: 'Personalized decor to reflect your design direction.' },
       { title: 'Curated selections', desc: 'Thoughtful pieces chosen for elegant visual cohesion.' },
@@ -90,7 +90,7 @@ export const products = [
     description: 'Elegant glass dispensers that keep guests refreshed while complementing your table design.',
     duration: '1-2 Days',
     pickup: 'Smithville, Ontario',
-    delivery: 'Hamilton, Ontario & Surrounding Area',
+    delivery: 'Hamilton, Ontario & Surrounding Area *Additional fees may apply*',
     features: [
       { title: 'Clean presentation', desc: 'Glass styling blends seamlessly with upscale event decor.' },
       { title: 'Practical service', desc: 'Convenient hydration option for guests throughout the event.' },
@@ -109,7 +109,7 @@ export const products = [
     description: 'Beautiful wooden benches with timeless character for ceremony aisles and lounge seating.',
     duration: '1-2 Days',
     pickup: 'Smithville, Ontario',
-    delivery: 'Hamilton, Ontario & Surrounding Area',
+    delivery: 'Hamilton, Ontario & Surrounding Area *Additional fees may apply*',
     features: [
       { title: 'Ceremony ready', desc: 'Ideal for guest rows, sweetheart areas, and photo vignettes.' },
       { title: 'Solid construction', desc: 'Designed for comfort and dependable event-day use.' },
@@ -128,7 +128,7 @@ export const products = [
     description: 'A vintage chest coffee table that delivers character, function, and visual depth to lounge setups.',
     duration: '1-2 Days',
     pickup: 'Smithville, Ontario',
-    delivery: 'Hamilton, Ontario & Surrounding Area',
+    delivery: 'Hamilton, Ontario & Surrounding Area *Additional fees may apply*',
     features: [
       { title: 'Distinctive look', desc: 'Unique focal piece for relaxed seating areas and lounges.' },
       { title: 'Multi-use design', desc: 'Functions as both tabletop and hidden storage.' },
@@ -147,7 +147,7 @@ export const products = [
     description: 'An elegant timeline display to guide guests and keep your day flowing smoothly.',
     duration: '1-2 Days',
     pickup: 'Smithville, Ontario',
-    delivery: 'Hamilton, Ontario & Surrounding Area',
+    delivery: 'Hamilton, Ontario & Surrounding Area *Additional fees may apply*',
     features: [
       { title: 'Clear communication', desc: 'Helps guests stay informed throughout each event milestone.' },
       { title: 'Design-forward signage', desc: 'A polished piece that complements your decor story.' },
@@ -166,7 +166,7 @@ export const products = [
     description: 'Create a breathtaking ceremony focal point with elegant arches ready for floral styling.',
     duration: '1-2 Days',
     pickup: 'Smithville, Ontario',
-    delivery: 'Hamilton, Ontario & Surrounding Area',
+    delivery: 'Hamilton, Ontario & Surrounding Area *Additional fees may apply*',
     features: [
       { title: 'Ceremony centerpiece', desc: 'Frames vows beautifully for guests and photography.' },
       { title: 'Indoor or outdoor', desc: 'Designed to suit multiple venue types and layouts.' },
@@ -185,7 +185,7 @@ export const products = [
     description: 'A charming tiered display for desserts, favors, and curated reception details.',
     duration: '1-2 Days',
     pickup: 'Smithville, Ontario',
-    delivery: 'Hamilton, Ontario & Surrounding Area',
+    delivery: 'Hamilton, Ontario & Surrounding Area *Additional fees may apply*',
     features: [
       { title: 'Tiered visual appeal', desc: 'Creates depth and elegance on dessert or welcome tables.' },
       { title: 'Space-saving setup', desc: 'Vertical form maximizes display impact in compact areas.' },
@@ -205,7 +205,7 @@ export const products = [
     description: 'Add romantic glow and depth with candle lanterns for aisles, tables, and pathways.',
     duration: '1-2 Days',
     pickup: 'Smithville, Ontario',
-    delivery: 'Hamilton, Ontario & Surrounding Area',
+    delivery: 'Hamilton, Ontario & Surrounding Area *Additional fees may apply*',
     features: [
       { title: 'Romantic ambiance', desc: 'Warm light elevates ceremony and reception atmosphere.' },
       { title: 'Flexible styling', desc: 'Use on tables, entryways, altars, or lounge zones.' },
@@ -224,7 +224,7 @@ export const products = [
     description: 'Vintage Edison lighting adds a soft, inviting glow that transforms evening celebrations.',
     duration: '1-2 Days',
     pickup: 'Smithville, Ontario',
-    delivery: 'Hamilton, Ontario & Surrounding Area',
+    delivery: 'Hamilton, Ontario & Surrounding Area *Additional fees may apply*',
     features: [
       { title: 'Warm evening tone', desc: 'Creates cozy atmosphere for sunset and night events.' },
       { title: 'Classic aesthetic', desc: 'Edison bulbs blend rustic and refined styling cues.' },
@@ -243,7 +243,7 @@ export const products = [
     description: 'Designed photo backdrops that help guests capture polished, memorable event moments.',
     duration: '1-2 Days',
     pickup: 'Smithville, Ontario',
-    delivery: 'Hamilton, Ontario & Surrounding Area',
+    delivery: 'Hamilton, Ontario & Surrounding Area *Additional fees may apply*',
     features: [
       { title: 'Dedicated photo zone', desc: 'Creates a clear focal area for guest photos and portraits.' },
       { title: 'Event-branded look', desc: 'Backdrop styling can align with your wedding theme.' },
@@ -262,7 +262,7 @@ export const products = [
     description: 'Galvanized stock tanks ideal for beverage stations, floral styling, and creative decor moments.',
     duration: '1-2 Days',
     pickup: 'Smithville, Ontario',
-    delivery: 'Hamilton, Ontario & Surrounding Area',
+    delivery: 'Hamilton, Ontario & Surrounding Area *Additional fees may apply*',
     features: [
       { title: 'Multi-purpose use', desc: 'Great for drinks on ice, florals, or decorative installations.' },
       { title: 'Farmhouse texture', desc: 'Adds rustic edge that pairs with natural wedding elements.' },
