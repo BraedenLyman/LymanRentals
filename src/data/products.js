@@ -233,25 +233,6 @@ export const products = [
     ]
   },
   {
-    id: 13,
-    slug: 'photo-backdrop',
-    name: 'Photo Backdrop',
-    category: 'Decor & Signage',
-    price: '$40 / Unit',
-    image: '/images/16.png',
-    images: ['/images/16.png'],
-    description: 'Designed photo backdrops that help guests capture polished, memorable event moments.',
-    duration: '1-2 Days',
-    pickup: 'Smithville, Ontario',
-    delivery: 'Hamilton, Ontario & Surrounding Area *Additional fees may apply*',
-    features: [
-      { title: 'Dedicated photo zone', desc: 'Creates a clear focal area for guest photos and portraits.' },
-      { title: 'Event-branded look', desc: 'Backdrop styling can align with your wedding theme.' },
-      { title: 'Quick setup', desc: 'Simple assembly supports efficient event-day coordination.' },
-      { title: 'Memory friendly', desc: 'Encourages natural moments guests love to share.' }
-    ]
-  },
-  {
     id: 14,
     slug: 'stock-tanks',
     name: 'Stock Tanks',
