@@ -40,11 +40,22 @@ function ScrollEnhancements() {
   }, []);
 
   useEffect(() => {
-    const revealElements = Array.from(document.querySelectorAll('.reveal-on-scroll'));
+    const revealSelector = '.reveal-on-scroll';
+    const revealElements = Array.from(document.querySelectorAll(revealSelector));
+    const markVisible = (element) => {
+      element.classList.add('is-visible');
+    };
 
     if (prefersReducedMotion) {
       revealElements.forEach((element) => {
-        element.classList.add('is-visible');
+        markVisible(element);
+      });
+      return;
+    }
+
+    if (typeof window.IntersectionObserver !== 'function') {
+      revealElements.forEach((element) => {
+        markVisible(element);
       });
       return;
     }
@@ -57,7 +68,7 @@ function ScrollEnhancements() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
+            markVisible(entry.target);
             observer.unobserve(entry.target);
           }
         });
@@ -68,14 +79,56 @@ function ScrollEnhancements() {
       }
     );
 
-    revealElements.forEach((element) => {
-      if (!element.classList.contains('is-visible')) {
+    const attachRevealBehavior = (elements) => {
+      elements.forEach((element) => {
+        if (element.classList.contains('is-visible')) {
+          return;
+        }
+
+        const rect = element.getBoundingClientRect();
+        const isAlreadyInView = rect.top <= window.innerHeight * 0.92 && rect.bottom >= 0;
+
+        if (isAlreadyInView) {
+          markVisible(element);
+          return;
+        }
+
         observer.observe(element);
+      });
+    };
+
+    attachRevealBehavior(revealElements);
+
+    const mutationObserver = new MutationObserver((mutations) => {
+      const addedRevealElements = [];
+
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (!(node instanceof HTMLElement)) {
+            return;
+          }
+
+          if (node.matches(revealSelector)) {
+            addedRevealElements.push(node);
+          }
+
+          addedRevealElements.push(...node.querySelectorAll(revealSelector));
+        });
+      });
+
+      if (addedRevealElements.length > 0) {
+        attachRevealBehavior(addedRevealElements);
       }
+    });
+
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true
     });
 
     return () => {
       observer.disconnect();
+      mutationObserver.disconnect();
     };
   }, [pathname, prefersReducedMotion]);
 
