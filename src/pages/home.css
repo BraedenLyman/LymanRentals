@@ -1329,6 +1329,14 @@ p {
   .cta-banner {
     grid-template-columns: 1fr;
   }
+
+  .why-image-wrap {
+    justify-self: center;
+  }
+
+  .inspiration-copy {
+    justify-self: center;
+  }
 }
 
 @media (max-width: 860px) {
