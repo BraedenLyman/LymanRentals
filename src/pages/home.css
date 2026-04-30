@@ -669,14 +669,14 @@ p {
 }
 
 .inspiration-copy {
-  order: 2;
-  justify-self: end;
+  order: 1;
+  justify-self: start;
   max-width: 540px;
   padding-left: 0;
 }
 
 .inspiration-collage {
-  order: 1;
+  order: 2;
 }
 
 .feature-card-grid {
@@ -1347,7 +1347,9 @@ p {
   }
 
   .contact-form-grid,
-  .inspiration-collage {
+  .inspiration-collage,
+  .why-grid,
+  .inspiration-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1357,6 +1359,14 @@ p {
 
   .inspiration-card.tall {
     grid-row: span 1;
+  }
+
+  .why-image-wrap {
+    justify-self: center;
+  }
+
+  .inspiration-copy {
+    justify-self: center;
   }
 
   .products-toolbar,
