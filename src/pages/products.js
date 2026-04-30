@@ -110,24 +110,10 @@ function Products() {
               ))}
             </div>
 
-            <div className="category-navigation">
-              {categories
-                .filter((category) => category.id !== 'all')
-                .map((category) => (
-                  <article key={category.id} className={`category-nav-card ${activeCategory === category.id ? 'is-active' : ''}`}>
-                    <button type="button" onClick={() => setActiveCategory(category.id)}>
-                      <p className="eyebrow">{category.name}</p>
-                      <h3>{category.name}</h3>
-                      <p>{category.blurb}</p>
-                    </button>
-                  </article>
-                ))}
-            </div>
-
             <div className="section-heading section-heading-tight">
               <div>
                 <p className="eyebrow">Collection</p>
-                <h2>{filteredProducts.length} rentals ready to browse.</h2>
+                <h2>{filteredProducts.length} {activeCategory === 'all' ? 'rentals' : 'items'} ready to browse.</h2>
               </div>
             </div>
 

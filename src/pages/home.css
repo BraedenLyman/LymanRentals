@@ -513,7 +513,6 @@ p {
 .category-nav-card,
 .product-card,
 .contact-form-card,
-.contact-detail-list,
 .faq-panel {
   border: 1px solid var(--line);
   background: rgba(255, 253, 249, 0.84);
@@ -593,7 +592,7 @@ p {
 .inspiration-grid,
 .testimonial-shell,
 .cta-banner,
-.contact-layout,
+.contact-grid,
 .footer-grid {
   display: grid;
   gap: 1.4rem;
@@ -941,27 +940,7 @@ p {
 }
 
 .category-navigation {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-bottom: 2rem;
-}
-
-.category-nav-card {
-  border-radius: 22px;
-}
-
-.category-nav-card button {
-  display: grid;
-  gap: 0.4rem;
-  width: 100%;
-  padding: 1.25rem;
-  border: 0;
-  background: transparent;
-  text-align: left;
-}
-
-.category-nav-card.is-active {
-  border-color: var(--line-strong);
-  background: rgba(214, 190, 160, 0.13);
+  display: none;
 }
 
 .products-grid {
@@ -1097,9 +1076,16 @@ p {
   margin-top: 1.6rem;
 }
 
-.contact-layout {
+.contact-grid {
+  display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: 2rem;
   align-items: start;
+}
+
+.contact-info-column {
+  display: grid;
+  gap: 1.5rem;
 }
 
 .contact-form-card {
@@ -1138,11 +1124,6 @@ p {
   resize: vertical;
 }
 
-.contact-side-stack {
-  display: grid;
-  gap: 1rem;
-}
-
 .contact-info-panel h3,
 .faq-panel h3 {
   margin-bottom: 0.5rem;
@@ -1152,21 +1133,33 @@ p {
   margin-bottom: 1.1rem;
 }
 
-.contact-detail-list {
+.contact-quick-info {
   display: grid;
-  gap: 1rem;
+  gap: 1.2rem;
+  padding: 1.5rem;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255, 253, 249, 0.9), rgba(247, 240, 232, 0.88));
+  border: 1px solid var(--line);
 }
 
-.contact-detail-list > div {
+.quick-info-item {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.8rem;
   align-items: start;
 }
 
-.contact-detail-list svg {
+.quick-info-item h4 {
+  margin: 0 0 0.25rem 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.quick-info-item svg {
   color: var(--champagne-deep);
   margin-top: 0.2rem;
+  flex-shrink: 0;
 }
 
 .faq-list {
@@ -1314,7 +1307,7 @@ p {
   .why-grid,
   .inspiration-grid,
   .testimonial-shell,
-  .contact-layout,
+  .contact-grid,
   .footer-grid,
   .product-modal-grid {
     grid-template-columns: 1fr;
