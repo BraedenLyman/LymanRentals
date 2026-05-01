@@ -26,6 +26,7 @@ function Contact() {
       </main>
       <SiteFooter />
     </div>
+    
   );
 }
 
