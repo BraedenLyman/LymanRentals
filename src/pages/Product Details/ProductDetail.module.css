@@ -1,0 +1,246 @@
+.pageIntro {
+  padding-top: 2rem;
+  padding-bottom: 0.45rem;
+}
+
+.compactTop {
+  padding-top: 1rem;
+}
+
+.detailHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.detailBottomGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1rem;
+  align-items: stretch;
+  margin-top: 0.25rem;
+}
+
+.detailSideStack {
+  display: grid;
+  gap: 0.8rem;
+  align-content: start;
+}
+
+.detailPriceActions {
+  display: block;
+}
+
+.detailGallery,
+.detailCharacteristicsCard {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.detailImageWrap {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.detailImageWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #f6efe5;
+}
+
+.detailArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.detailArrow.left {
+  left: 0.8rem;
+}
+
+.detailArrow.right {
+  right: 0.8rem;
+}
+
+.detailDots {
+  position: absolute;
+  left: 50%;
+  bottom: 0.85rem;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.38rem;
+  padding: 0.3rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(24, 16, 10, 0.34);
+  z-index: 2;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  border: none;
+  background: #c9baa8;
+  cursor: pointer;
+}
+
+.dot.active {
+  width: 24px;
+  background: var(--accent);
+}
+
+.detailPricePanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fff 0%, #f8f0e5 100%);
+  padding: 0.85rem 0.95rem;
+}
+
+.detailPriceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.modalPrice {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.7rem;
+  color: var(--accent);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.detailCheckBtn {
+  min-height: 34px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.84rem;
+  border-radius: 8px;
+  width: fit-content;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.priceMeta {
+  font-size: 0.86rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.detailInfoRows {
+  padding: 0.4rem 0.75rem;
+}
+
+.detailInfoRows p {
+  margin: 0;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.detailInfoRows p:last-child {
+  border-bottom: none;
+}
+
+.detailInfoRows strong {
+  color: var(--text);
+}
+
+.detailLabel {
+  display: inline-block;
+  width: 4.9rem;
+}
+
+.detailValue {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.detailDelivery {
+  max-width: 65%;
+  text-align: end;
+}
+
+.detailFeatures {
+  padding: 0.4rem 0.75rem;
+}
+
+.detailFeaturesList {
+  display: block;
+}
+
+.detailFeaturesList article {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.detailFeaturesList article:last-child {
+  border-bottom: none;
+}
+
+.detailFeaturesList h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.12rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.detailFeaturesList p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.detailPageFooter {
+  margin-top: 0.45rem;
+}
+
+.detailBackBottom {
+  margin-top: 0;
+}
+
+@media (max-width: 1100px) {
+  .detailBottomGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .detailInfoRows p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .detailValue {
+    font-size: 14px;
+  }
+
+  .detailDelivery {
+    max-width: 65%;
+    text-align: end;
+  }
+}

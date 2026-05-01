@@ -1,0 +1,28 @@
+.pageIntro {
+  padding-bottom: 1.2rem;
+}
+
+.contactSimpleWrap {
+  max-width: 760px;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.contactCompactBtn {
+  min-height: 60px;
+  padding: 0.45rem 1rem;
+  font-size: 0.9rem;
+  width: fit-content;
+  margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+  .pageIntro {
+    text-align: center;
+  }
+
+  .contactCompactBtn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

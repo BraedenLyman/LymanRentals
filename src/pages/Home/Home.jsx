@@ -1,10 +1,10 @@
 import React from 'react';
 import { CalendarDays, CheckCircle2, MessageCircleHeart, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import SiteHeader from '../components/SiteHeader';
-import SiteFooter from '../components/SiteFooter';
-import { products } from '../data/products';
-import './home.css';
+import SiteHeader from '../../components/SiteHeader';
+import SiteFooter from '../../components/SiteFooter';
+import { products } from '../../data/products';
+import styles from './Home.module.css';
 
 const testimonials = [
   {
@@ -59,31 +59,33 @@ function Home() {
       <main>
         <section
           id="home"
-          className="hero"
+          className={styles.hero}
           style={{
             backgroundImage: `linear-gradient(rgba(27, 18, 10, 0.42), rgba(27, 18, 10, 0.1)), url(${process.env.PUBLIC_URL}/images/welcome.png)`
           }}
         >
-          <div className="hero-overlay" />
-          <div className="container hero-content">
-            <p className="eyebrow">Elegant Rentals for Meaningful Celebrations</p>
-            <h1>Beautifully curated wedding and event rentals that feel effortless.</h1>
-            <p className="hero-copy">
-              We help couples and planners create warm, polished event spaces with reliable service, thoughtful pieces, and a stress-free process.
-            </p>
-            <div className="hero-actions">
-              <Link className="btn btn-primary" to="/products">
-                View Products
-              </Link>
-              <Link className="btn btn-secondary start-inquiry-btn" to="/contact">
-                Start Inquiry
-              </Link>
+          <div className={styles.heroOverlay} />
+          <div className="container">
+            <div className={styles.heroContent}>
+              <p className="eyebrow">Elegant Rentals for Meaningful Celebrations</p>
+              <h1>Beautifully curated wedding and event rentals that feel effortless.</h1>
+              <p className={styles.heroCopy}>
+                We help couples and planners create warm, polished event spaces with reliable service, thoughtful pieces, and a stress-free process.
+              </p>
+              <div className={styles.heroActions}>
+                <Link className="btn btn-primary" to="/products">
+                  View Products
+                </Link>
+                <Link className={`btn btn-secondary ${styles.startInquiryBtn}`} to="/contact">
+                  Start Inquiry
+                </Link>
+              </div>
             </div>
           </div>
         </section>
 
-        <section id="about" className="section about">
-          <div className="container about-grid">
+        <section id="about" className={`section ${styles.about}`}>
+          <div className={`container ${styles.aboutGrid}`}>
             <div>
               <p className="eyebrow">Why Couples Choose Us</p>
               <h2>Warm, high-quality rentals with dependable event-day support.</h2>
@@ -91,7 +93,7 @@ function Home() {
                 We focus on timeless pieces that photograph beautifully and elevate your venue without overcomplicating your planning process. From ceremony focal points to reception details, every item is selected to feel refined, welcoming, and celebration-ready.
               </p>
             </div>
-            <div className="about-cards">
+            <div className={styles.aboutCards}>
               <article>
                 <h3>Quality You Can Trust</h3>
                 <p>Clean, event-ready inventory with careful attention to presentation and condition.</p>
@@ -108,32 +110,32 @@ function Home() {
           </div>
         </section>
 
-        <section className="section rentals-section">
+        <section className={`section ${styles.rentalsSection}`}>
           <div className="container">
-            <div className="rentals-head">
+            <div className={styles.rentalsHead}>
               <div>
                 <p className="eyebrow">Featured Collection</p>
                 <h2>Explore a preview of our curated inventory.</h2>
               </div>
             </div>
 
-            <div className="rental-grid">
+            <div className={styles.rentalGrid}>
               {featuredProducts.map((product) => (
-                <article key={product.id} className="rental-card">
-                  <div className="rental-image-wrap">
+                <article key={product.id} className={styles.rentalCard}>
+                  <div className={styles.rentalImageWrap}>
                     <img src={product.image} alt={product.name} loading="lazy" />
-                    <span className="tag">{product.category}</span>
+                    <span className={styles.tag}>{product.category}</span>
                   </div>
-                  <div className="rental-card-body">
+                  <div className={styles.rentalCardBody}>
                     <h3>{product.name}</h3>
-                    <p className="price">{product.price}</p>
+                    <p className={styles.price}>{product.price}</p>
                     <p>{product.description}</p>
                   </div>
                 </article>
               ))}
             </div>
 
-            <div className="featured-products-footer">
+            <div className={styles.featuredProductsFooter}>
               <Link to="/products" className="btn btn-secondary">
                 View All Products
               </Link>
@@ -141,17 +143,17 @@ function Home() {
           </div>
         </section>
 
-        <section id="how-it-works" className="section process-section">
+        <section id="how-it-works" className={`section ${styles.processSection}`}>
           <div className="container">
             <p className="eyebrow">How It Works</p>
             <h2>A simple process from first message to event day.</h2>
-            <div className="process-grid">
+            <div className={styles.processGrid}>
               {processSteps.map((step, index) => {
                 const Icon = step.icon;
                 return (
-                  <article key={step.title} className="process-card">
-                    <span className="step-index">0{index + 1}</span>
-                    <div className="process-head">
+                  <article key={step.title} className={styles.processCard}>
+                    <span className={styles.stepIndex}>0{index + 1}</span>
+                    <div className={styles.processHead}>
                       <Icon size={20} />
                       <h3>{step.title}</h3>
                     </div>
@@ -163,14 +165,14 @@ function Home() {
           </div>
         </section>
 
-        <section className="section testimonial-section">
+        <section className={`section ${styles.testimonialSection}`}>
           <div className="container">
             <p className="eyebrow">Client Feedback</p>
             <h2>Trusted by couples.</h2>
-            <div className="testimonial-grid">
+            <div className={styles.testimonialGrid}>
               {testimonials.map((testimonial) => (
                 <article key={testimonial.author}>
-                  <p>“{testimonial.quote}”</p>
+                  <p>"{testimonial.quote}"</p>
                   <span>{testimonial.author}</span>
                 </article>
               ))}
@@ -178,14 +180,13 @@ function Home() {
           </div>
         </section>
 
-        <section className="section contact-section">
-          <div className="container contact-wrap">
+        <section className={`section ${styles.contactSection}`}>
+          <div className={`container ${styles.contactWrap}`}>
             <div>
               <p className="eyebrow">Ready To Book?</p>
               <h2>Head to the contact page to submit your event details.</h2>
-            
             </div>
-            <div className="contact-card">
+            <div className={styles.contactCard}>
               <Link className="btn btn-primary" to="/contact">
                 Go to Contact Page
               </Link>

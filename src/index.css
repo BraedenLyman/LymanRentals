@@ -1,13 +1,344 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #f8f4ee;
+  --surface: #fffdf9;
+  --surface-alt: #f1e8dd;
+  --line: #e7dccf;
+  --line-strong: #d4c3ad;
+  --text: #2f2a25;
+  --muted: #685f55;
+  --accent: #876a4a;
+  --accent-dark: #6f5437;
+  --shadow-soft: 0 10px 30px rgba(47, 32, 16, 0.08);
+  --shadow-strong: 0 20px 60px rgba(47, 32, 16, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 80% -10%, #f3e6d6 0%, transparent 40%), var(--bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+.site-shell {
+  overflow-x: clip;
+}
+
+.container {
+  width: min(1120px, calc(100% - 2.5rem));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 5.5rem 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+h2 {
+  font-size: clamp(2rem, 3.4vw, 3.1rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin: 0;
+  line-height: 1.7;
+  color: var(--muted);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  border-radius: 999px;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 220ms ease, background-color 220ms ease, box-shadow 220ms ease, color 220ms ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(91, 63, 34, 0.25);
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--line-strong);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(252, 249, 244, 0.92);
+  border-bottom: 1px solid rgba(212, 195, 173, 0.55);
+  backdrop-filter: blur(8px);
+}
+
+.nav-wrap {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-mark {
+  display: block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1;
+}
+
+.brand-sub {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 0.25rem;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  border: none;
+  background: none;
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  background: rgba(212, 195, 173, 0.24);
+  color: var(--text);
+}
+
+.nav-link.active {
+  background: rgba(212, 195, 173, 0.34);
+  color: var(--text);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.mobile-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.mobile-menu {
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+  animation: menuIn 0.24s ease;
+}
+
+.mobile-menu-links {
+  width: min(1120px, calc(100% - 2.5rem));
+  margin: 0 auto;
+  padding: 1rem 0 1.2rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.mobile-link {
+  display: inline-flex;
+  align-items: center;
+  text-align: left;
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 10px;
+  min-height: 46px;
+  padding: 0 0.9rem;
+}
+
+.mobile-link.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: #f8efe3;
+}
+
+.mobile-menu-cta {
+  margin-top: 0.35rem;
+}
+
+.page-main {
+  min-height: 70vh;
+}
+
+.page-intro {
+  padding-bottom: 1.2rem;
+}
+
+.page-title {
+  font-size: clamp(2.15rem, 4vw, 3.25rem);
+  line-height: 1.02;
+}
+
+.page-copy {
+  max-width: 68ch;
+  margin-top: 0.8rem;
+}
+
+.compact-top {
+  padding-top: 1rem;
+}
+
+.compact-bottom {
+  padding-bottom: 1rem;
+}
+
+.site-footer {
+  background: #2e251a;
+  color: #efe4d6;
+  padding: 2.2rem 0;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #fff;
+  font-size: 1.7rem;
+}
+
+.site-footer p {
+  color: #e2d2bf;
+}
+
+@keyframes menuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 850px) {
+  .desktop-nav,
+  .nav-cta {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: min(1120px, calc(100% - 1.5rem));
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
 }

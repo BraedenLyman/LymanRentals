@@ -1,0 +1,335 @@
+.hero {
+  position: relative;
+  min-height: min(88vh, 760px);
+  padding: 6.6rem 0 4.4rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(45, 31, 17, 0.55), rgba(45, 31, 17, 0.2));
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  max-width: 760px;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 7vw, 4.7rem);
+  line-height: 0.97;
+  margin-bottom: 1rem;
+}
+
+.hero .eyebrow,
+.heroCopy {
+  color: #f9eee0;
+}
+
+.heroCopy {
+  max-width: 640px;
+  font-size: 1.08rem;
+}
+
+.heroActions {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.startInquiryBtn {
+  color: var(--line-strong);
+  border-color: var(--line-strong);
+}
+
+.startInquiryBtn:hover {
+  color: var(--line-strong);
+  border-color: var(--line-strong);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.about {
+  background: var(--surface);
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.aboutGrid > div:first-child p {
+  max-width: 58ch;
+}
+
+.aboutCards {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.aboutCards article {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.aboutCards h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.rentalsSection {
+  padding-top: 3rem;
+}
+
+.rentalsHead {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.35rem;
+}
+
+.rentalGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.rentalCard {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform 250ms ease, box-shadow 250ms ease;
+  cursor: pointer;
+}
+
+.rentalCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(47, 32, 16, 0.13);
+}
+
+.rentalImageWrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.rentalImageWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tag {
+  position: absolute;
+  left: 0.7rem;
+  top: 0.7rem;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.73rem;
+  font-weight: 700;
+}
+
+.rentalCardBody {
+  padding: 1rem;
+}
+
+.rentalCardBody h3 {
+  font-size: 1.55rem;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.featuredProductsFooter {
+  margin-top: 1.1rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.processSection {
+  padding-top: 3.5rem;
+  background: linear-gradient(180deg, #f8f4ee, #f6f0e8);
+}
+
+.processGrid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.processCard {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.processHead {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.stepIndex {
+  display: inline-flex;
+  font-size: 0.72rem;
+  letter-spacing: 0.07em;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.processCard h3 {
+  font-size: 1.45rem;
+  margin: 0;
+}
+
+.processCard p {
+  margin-top: 0.5rem;
+}
+
+.testimonialSection {
+  background: var(--surface);
+}
+
+.testimonialGrid {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.testimonialGrid article {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.testimonialGrid article p {
+  font-size: 0.95rem;
+}
+
+.testimonialGrid article span {
+  margin-top: auto;
+  padding-top: 0.85rem;
+  display: block;
+  font-size: 0.82rem;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.contactSection {
+  background: linear-gradient(130deg, #f7efe4 0%, #f4eadf 50%, #f7f1e8 100%);
+}
+
+.contactWrap {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.contactCard {
+  display: grid;
+  align-content: start;
+  gap: 0.8rem;
+  margin-top: auto;
+}
+
+.contactCard h3 {
+  font-size: 1.65rem;
+}
+
+@media (max-width: 1100px) {
+  .rentalGrid,
+  .testimonialGrid,
+  .processGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .heroContent {
+    text-align: center;
+  }
+
+  .aboutGrid,
+  .contactWrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 850px) {
+  .hero {
+    min-height: 74vh;
+    padding-top: 5rem;
+  }
+
+  .rentalsHead {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .rentalGrid,
+  .testimonialGrid,
+  .processGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .about {
+    text-align: center;
+  }
+
+  .rentalsSection {
+    text-align: center;
+  }
+
+  .featuredProductsFooter {
+    justify-content: center;
+  }
+
+  .processSection {
+    text-align: center;
+  }
+
+  .processHead {
+    justify-content: center;
+  }
+
+  .testimonialSection {
+    text-align: center;
+  }
+
+  .contactSection {
+    text-align: center;
+  }
+}

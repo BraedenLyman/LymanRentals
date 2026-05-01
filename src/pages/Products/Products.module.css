@@ -1,0 +1,152 @@
+.pageIntro {
+  padding-bottom: 1.2rem;
+}
+
+.rentalsSection {
+  padding-top: 1rem;
+}
+
+.rentalGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.rentalCard {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform 250ms ease, box-shadow 250ms ease;
+  cursor: pointer;
+}
+
+.rentalCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(47, 32, 16, 0.13);
+}
+
+.productLinkWrap {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.rentalImageWrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.rentalImageWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tag {
+  position: absolute;
+  left: 0.7rem;
+  top: 0.7rem;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.73rem;
+  font-weight: 700;
+}
+
+.rentalCardBody {
+  padding: 1rem;
+}
+
+.rentalCardBody h3 {
+  font-size: 1.55rem;
+  margin-bottom: 0.5rem;
+}
+
+.productCardBody {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.note {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.textLink {
+  margin-top: 0.75rem;
+  display: inline-block;
+  background: none;
+  border: none;
+  color: var(--accent);
+  padding: 0;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.productCardBody .textLink {
+  margin-top: auto;
+  padding-top: 1.1rem;
+}
+
+.productsCta {
+  margin-top: 2rem;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.productsCta h3 {
+  font-size: 2rem;
+}
+
+.productsCta p {
+  margin: 0.4rem 0 1rem;
+}
+
+.contactCompactBtn {
+  min-height: 60px;
+  padding: 0.45rem 1rem;
+  font-size: 0.9rem;
+  width: fit-content;
+  margin-top: 30px;
+}
+
+@media (max-width: 1100px) {
+  .rentalGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .rentalGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pageIntro {
+    text-align: center;
+  }
+
+  .contactCompactBtn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

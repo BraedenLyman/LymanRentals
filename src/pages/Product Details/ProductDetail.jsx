@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link, Navigate, useParams } from 'react-router-dom';
-import SiteHeader from '../components/SiteHeader';
-import SiteFooter from '../components/SiteFooter';
-import { products } from '../data/products';
-import './home.css';
+import SiteHeader from '../../components/SiteHeader';
+import SiteFooter from '../../components/SiteFooter';
+import { products } from '../../data/products';
+import styles from './ProductDetail.module.css';
 
 function ProductDetail() {
   const { slug } = useParams();
@@ -36,8 +36,8 @@ function ProductDetail() {
     <div className="site-shell">
       <SiteHeader />
       <main className="page-main">
-        <section className="section page-intro compact-bottom detail-page-intro">
-          <div className="container detail-header">
+        <section className={`section ${styles.pageIntro}`}>
+          <div className={`container ${styles.detailHeader}`}>
             <div>
               <p className="eyebrow">{product.category}</p>
               <h1 className="page-title">{product.name}</h1>
@@ -46,24 +46,24 @@ function ProductDetail() {
           </div>
         </section>
 
-        <section className="section compact-top">
-          <div className="container detail-bottom-grid">
-            <div className="detail-gallery">
-              <div className="detail-image-wrap">
+        <section className={`section ${styles.compactTop}`}>
+          <div className={`container ${styles.detailBottomGrid}`}>
+            <div className={styles.detailGallery}>
+              <div className={styles.detailImageWrap}>
                 <img src={product.images?.[currentImageIndex] || product.image} alt={product.name} />
                 {product.images && product.images.length > 1 && (
                   <>
-                    <button className="detail-arrow left" onClick={previousImage} aria-label="Previous image">
+                    <button className={`${styles.detailArrow} ${styles.left}`} onClick={previousImage} aria-label="Previous image">
                       <ChevronLeft size={18} />
                     </button>
-                    <button className="detail-arrow right" onClick={nextImage} aria-label="Next image">
+                    <button className={`${styles.detailArrow} ${styles.right}`} onClick={nextImage} aria-label="Next image">
                       <ChevronRight size={18} />
                     </button>
-                    <div className="detail-dots">
+                    <div className={styles.detailDots}>
                       {product.images.map((image, index) => (
                         <button
                           key={image}
-                          className={`dot ${currentImageIndex === index ? 'active' : ''}`}
+                          className={`${styles.dot} ${currentImageIndex === index ? styles.active : ''}`}
                           onClick={() => setCurrentImageIndex(index)}
                           aria-label={`View image ${index + 1}`}
                         />
@@ -74,37 +74,37 @@ function ProductDetail() {
               </div>
             </div>
 
-            <div className="detail-side-stack">
-              <div className="detail-price-actions">
-                <div className="detail-price-panel">
-                  <div className="detail-price-row">
-                    <p className="modal-price">{product.price}</p>
-                    <Link className="btn btn-primary detail-check-btn" to="/contact">
+            <div className={styles.detailSideStack}>
+              <div className={styles.detailPriceActions}>
+                <div className={styles.detailPricePanel}>
+                  <div className={styles.detailPriceRow}>
+                    <p className={styles.modalPrice}>{product.price}</p>
+                    <Link className={`btn btn-primary ${styles.detailCheckBtn}`} to="/contact">
                       Check Availability
                     </Link>
                   </div>
-                  {product.priceNote && <p className="price-meta">{product.priceNote}</p>}
-                  {product.note && <p className="price-meta">{product.note}</p>}
+                  {product.priceNote && <p className={styles.priceMeta}>{product.priceNote}</p>}
+                  {product.note && <p className={styles.priceMeta}>{product.note}</p>}
                 </div>
               </div>
 
-              <div className="detail-characteristics-card detail-info-rows">
+              <div className={`${styles.detailCharacteristicsCard} ${styles.detailInfoRows}`}>
                 <p>
-                  <strong className="detail-label">Duration</strong>
-                  <span className="detail-value">{product.duration}</span>
+                  <strong className={styles.detailLabel}>Duration</strong>
+                  <span className={styles.detailValue}>{product.duration}</span>
                 </p>
                 <p>
-                  <strong className="detail-label">Pickup</strong>
-                  <span className="detail-value">{product.pickup}</span>
+                  <strong className={styles.detailLabel}>Pickup</strong>
+                  <span className={styles.detailValue}>{product.pickup}</span>
                 </p>
                 <p>
-                  <strong className="detail-label">Delivery</strong>
-                  <span className="detail-value detail-delivery">{product.delivery}</span>
+                  <strong className={styles.detailLabel}>Delivery</strong>
+                  <span className={`${styles.detailValue} ${styles.detailDelivery}`}>{product.delivery}</span>
                 </p>
               </div>
 
-              <div className="detail-features detail-characteristics-card">
-                <div className="detail-features-list">
+              <div className={`${styles.detailFeatures} ${styles.detailCharacteristicsCard}`}>
+                <div className={styles.detailFeaturesList}>
                   {product.features.map((feature) => (
                     <article key={feature.title}>
                       <h4>{feature.title}</h4>
@@ -116,8 +116,8 @@ function ProductDetail() {
             </div>
           </div>
 
-          <div className="container detail-page-footer">
-            <Link to="/products" className="btn btn-secondary detail-back-bottom">
+          <div className={`container ${styles.detailPageFooter}`}>
+            <Link to="/products" className={`btn btn-secondary ${styles.detailBackBottom}`}>
               Back to Products
             </Link>
           </div>

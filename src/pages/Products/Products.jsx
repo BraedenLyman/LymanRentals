@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SiteHeader from '../components/SiteHeader';
-import SiteFooter from '../components/SiteFooter';
-import { products } from '../data/products';
-import './home.css';
+import SiteHeader from '../../components/SiteHeader';
+import SiteFooter from '../../components/SiteFooter';
+import { products } from '../../data/products';
+import styles from './Products.module.css';
 
 function Products() {
   return (
     <div className="site-shell">
       <SiteHeader />
       <main className="page-main">
-        <section className="section page-intro">
+        <section className={`section ${styles.pageIntro}`}>
           <div className="container">
             <p className="eyebrow">Product Collection</p>
             <h1 className="page-title">Browse all of our inventory.</h1>
@@ -18,33 +18,33 @@ function Products() {
           </div>
         </section>
 
-        <section className="section rentals-section compact-top">
+        <section className={`section ${styles.rentalsSection}`}>
           <div className="container">
-            <div className="rental-grid">
+            <div className={styles.rentalGrid}>
               {products.map((product) => (
-                <article key={product.id} className="rental-card">
-                  <Link to={`/products/${product.slug}`} className="product-link-wrap" aria-label={`Open product page for ${product.name}`}>
-                    <div className="rental-image-wrap">
+                <article key={product.id} className={styles.rentalCard}>
+                  <Link to={`/products/${product.slug}`} className={styles.productLinkWrap} aria-label={`Open product page for ${product.name}`}>
+                    <div className={styles.rentalImageWrap}>
                       <img src={product.image} alt={product.name} loading="lazy" />
-                      <span className="tag">{product.category}</span>
+                      <span className={styles.tag}>{product.category}</span>
                     </div>
-                    <div className="rental-card-body product-card-body">
+                    <div className={`${styles.rentalCardBody} ${styles.productCardBody}`}>
                       <h3>{product.name}</h3>
-                      <p className="price">{product.price}</p>
-                      {product.note && <p className="note">{product.note}</p>}
+                      <p className={styles.price}>{product.price}</p>
+                      {product.note && <p className={styles.note}>{product.note}</p>}
                       <p>{product.description}</p>
-                      <span className="text-link">View Product Page</span>
+                      <span className={styles.textLink}>View Product Page</span>
                     </div>
                   </Link>
                 </article>
               ))}
             </div>
 
-            <div className="products-cta">
+            <div className={styles.productsCta}>
               <h3>Ready to reserve your favorites?</h3>
               <p>Message us on Facebook to inquire about availability and any additional information.</p>
               <a
-                className="btn btn-primary contact-compact-btn"
+                className={`btn btn-primary ${styles.contactCompactBtn}`}
                 href="https://www.facebook.com/LymanRentals"
                 target="_blank"
                 rel="noopener noreferrer"
