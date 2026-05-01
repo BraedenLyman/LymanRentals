@@ -39,6 +39,7 @@ const faqs = [
 ];
 
 function FAQAccordion() {
+  
   const [openId, setOpenId] = useState(null);
 
   const toggleOpen = (id) => {
