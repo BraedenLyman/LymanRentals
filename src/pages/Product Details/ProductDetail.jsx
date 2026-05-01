@@ -12,14 +12,15 @@ function ProductDetail() {
 
   const product = products.find((item) => item.slug === slug);
 
+  // Get related products from the same category (excluding current product)
+  const relatedProducts = useMemo(() => {
+    if (!product) return [];
+    return products.filter((p) => p.category === product.category && p.slug !== product.slug).slice(0, 3);
+  }, [product]);
+
   if (!product) {
     return <Navigate to="/products" replace />;
   }
-
-  // Get related products from the same category (excluding current product)
-  const relatedProducts = useMemo(() => {
-    return products.filter((p) => p.category === product.category && p.slug !== product.slug).slice(0, 3);
-  }, [product.category, product.slug]);
 
   const nextImage = () => {
     if (!product.images || product.images.length < 2) {
