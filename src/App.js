@@ -4,6 +4,9 @@ import Home from './pages/Home/Home';
 import Products from './pages/Products/Products';
 import Contact from './pages/Contact/Contact';
 import ProductDetail from './pages/Product Details/ProductDetail';
+import Gallery from './pages/Gallery/Gallery';
+import About from './pages/About/About';
+import FAQ from './pages/FAQ/FAQ';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -14,6 +17,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/products/:slug" element={<ProductDetail />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/faq" element={<FAQ />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>

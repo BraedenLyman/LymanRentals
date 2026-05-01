@@ -1,0 +1,173 @@
+.faqHero {
+  padding-bottom: 0.5rem;
+}
+
+.faqHero h1 {
+  margin-bottom: 1rem;
+}
+
+.faqContent {
+  padding-top: 1rem;
+}
+
+.accordionContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.accordionItem {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  box-shadow: var(--shadow-soft);
+  transition: all 300ms ease;
+}
+
+.accordionItem:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.accordionQuestion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  transition: all 300ms ease;
+}
+
+.accordionQuestion:hover {
+  background: var(--beige);
+  color: var(--brown);
+}
+
+.accordionQuestion.active {
+  background: var(--sage);
+  color: white;
+  box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chevron {
+  flex-shrink: 0;
+  transition: transform 300ms ease;
+}
+
+.accordionQuestion.active .chevron {
+  transform: rotate(180deg);
+}
+
+.accordionAnswer {
+  padding: 0 1.5rem 1.5rem;
+  background: white;
+  border-top: 1px solid var(--line);
+  animation: slideDown 300ms ease;
+  line-height: 1.8;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.helpSection {
+  background: linear-gradient(135deg, var(--beige) 0%, rgba(122, 141, 123, 0.08) 100%);
+}
+
+.helpCard {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+}
+
+.helpCard h2 {
+  color: var(--charcoal);
+  margin-bottom: 1rem;
+}
+
+.helpCard p {
+  color: var(--muted);
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.helpButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.helpButtons .btn {
+  min-width: 180px;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    padding-bottom: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .accordionQuestion {
+    padding: 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .accordionAnswer {
+    padding: 0 1.2rem 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .accordionContainer {
+    gap: 0.5rem;
+  }
+
+  .accordionQuestion {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .accordionAnswer {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .chevron {
+    width: 20px;
+    height: 20px;
+  }
+
+  .helpCard {
+    padding: 1.5rem;
+  }
+
+  .helpButtons {
+    flex-direction: column;
+  }
+
+  .helpButtons .btn {
+    width: 100%;
+    min-width: unset;
+  }
+}

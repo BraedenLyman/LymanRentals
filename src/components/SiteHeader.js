@@ -4,7 +4,10 @@ import { NavLink } from 'react-router-dom';
 
 const navItems = [
   { label: 'Home', to: '/' },
-  { label: 'Products', to: '/products' },
+  { label: 'Rentals', to: '/products' },
+  { label: 'Gallery', to: '/gallery' },
+  { label: 'About', to: '/about' },
+  { label: 'FAQ', to: '/faq' },
   { label: 'Contact', to: '/contact' }
 ];
 
@@ -30,6 +33,9 @@ function SiteHeader() {
         </nav>
 
         <div className="nav-actions">
+          <NavLink className="btn btn-primary nav-cta-btn" to="/contact">
+            Get a Quote
+          </NavLink>
           <button className="mobile-toggle" onClick={() => setMobileMenuOpen((prev) => !prev)} aria-expanded={mobileMenuOpen} aria-label="Toggle menu">
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

@@ -2,73 +2,141 @@
   padding-bottom: 1.2rem;
 }
 
+.pageIntro h1 {
+  margin-bottom: 1rem;
+}
+
 .rentalsSection {
   padding-top: 1rem;
 }
 
+/* Filter Container */
+.filterContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.filterTabs {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filterTab {
+  background: white;
+  border: 2px solid var(--line);
+  color: var(--charcoal);
+  padding: 0.65rem 1.2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 200ms ease;
+}
+
+.filterTab:hover {
+  border-color: var(--brown);
+  color: var(--brown);
+  background: rgba(166, 124, 82, 0.04);
+}
+
+.filterTab.active {
+  background: var(--brown);
+  border-color: var(--brown);
+  color: white;
+  box-shadow: 0 8px 20px rgba(166, 124, 82, 0.3);
+}
+
+.resultCount {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Product Grid */
 .rentalGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 300ms ease;
 }
 
 .rentalCard {
   border: 1px solid var(--line);
-  background: #fff;
-  border-radius: 16px;
+  background: white;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--shadow-soft);
-  transition: transform 250ms ease, box-shadow 250ms ease;
+  transition: all 250ms ease;
   cursor: pointer;
 }
 
 .rentalCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(47, 32, 16, 0.13);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
 }
 
 .productLinkWrap {
-  display: block;
-  color: inherit;
-  text-decoration: none;
   display: flex;
   flex-direction: column;
   height: 100%;
+  color: inherit;
+  text-decoration: none;
 }
 
 .rentalImageWrap {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4/3;
   overflow: hidden;
-  border-radius: 16px;
+  background: var(--beige);
+  border-radius: 12px 12px 0 0;
 }
 
 .rentalImageWrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 350ms ease;
+}
+
+.rentalCard:hover .rentalImageWrap img {
+  transform: scale(1.08);
 }
 
 .tag {
   position: absolute;
-  left: 0.7rem;
-  top: 0.7rem;
-  background: rgba(255, 255, 255, 0.94);
-  color: var(--text);
+  left: 0.8rem;
+  top: 0.8rem;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--charcoal);
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 0.3rem 0.6rem;
-  font-size: 0.73rem;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.7rem;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .rentalCardBody {
-  padding: 1rem;
+  padding: 1.2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .rentalCardBody h3 {
-  font-size: 1.55rem;
+  color: var(--charcoal);
+  font-size: 1.3rem;
   margin-bottom: 0.5rem;
+  line-height: 1.2;
 }
 
 .productCardBody {
@@ -79,74 +147,177 @@
 
 .price {
   font-weight: 700;
-  color: var(--accent);
+  color: var(--brown);
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
 }
 
 .note {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--muted);
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.rentalCardBody > p:not(.price):not(.note) {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 1rem;
 }
 
 .textLink {
-  margin-top: 0.75rem;
-  display: inline-block;
-  background: none;
-  border: none;
-  color: var(--accent);
-  padding: 0;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-}
-
-.productCardBody .textLink {
+  color: var(--brown);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
   margin-top: auto;
-  padding-top: 1.1rem;
+  transition: all 200ms ease;
+  display: inline-block;
 }
 
+.textLink:hover {
+  color: var(--brown-dark);
+  transform: translateX(3px);
+}
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--beige);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.emptyState p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+/* CTA Section */
 .productsCta {
   margin-top: 2rem;
   border: 1px solid var(--line);
-  background: #fff;
-  border-radius: 16px;
-  padding: 1.2rem;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
   text-align: center;
   box-shadow: var(--shadow-soft);
 }
 
 .productsCta h3 {
-  font-size: 2rem;
+  font-size: 1.6rem;
+  color: var(--charcoal);
+  margin-bottom: 0.75rem;
 }
 
 .productsCta p {
-  margin: 0.4rem 0 1rem;
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contactCompactBtn {
-  min-height: 60px;
-  padding: 0.45rem 1rem;
-  font-size: 0.9rem;
+  min-height: 48px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
   width: fit-content;
-  margin-top: 30px;
 }
 
-@media (max-width: 1100px) {
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
   .rentalGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+  }
+
+  .filterContainer {
+    gap: 1rem;
+  }
+
+  .filterTabs {
+    width: 100%;
+  }
+
+  .filterTab {
+    padding: 0.55rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .rentalGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .filterContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .filterTabs {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .filterTab {
+    width: 100%;
+    text-align: center;
+  }
+
+  .resultCount {
+    width: 100%;
+  }
+
+  .productsCta {
+    padding: 1.5rem;
+  }
+
+  .productsCta h3 {
+    font-size: 1.3rem;
+  }
+
+  .contactCompactBtn {
+    width: 100%;
   }
 }
 
 @media (max-width: 600px) {
-  .rentalGrid {
-    grid-template-columns: 1fr;
-  }
-
   .pageIntro {
-    text-align: center;
+    padding-bottom: 1rem;
   }
 
-  .contactCompactBtn {
-    margin-left: auto;
-    margin-right: auto;
+  .rentalCardBody {
+    padding: 1rem;
+  }
+
+  .rentalCardBody h3 {
+    font-size: 1.15rem;
+  }
+
+  .filterTab {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .price {
+    font-size: 1rem;
   }
 }

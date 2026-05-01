@@ -1,22 +1,239 @@
 .pageIntro {
-  padding-bottom: 1.2rem;
+  padding-bottom: 1rem;
 }
 
-.contactSimpleWrap {
-  max-width: 760px;
-  display: grid;
-  gap: 0.9rem;
+.pageIntro h1 {
+  margin-bottom: 1rem;
 }
 
 .contactCompactBtn {
-  min-height: 60px;
-  padding: 0.45rem 1rem;
-  font-size: 0.9rem;
+  min-height: 48px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
   width: fit-content;
-  margin-top: 30px;
+  margin-top: 1rem;
 }
 
-@media (max-width: 600px) {
+/* Info Section */
+.infoSection {
+  background: white;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.infoCard {
+  background: var(--beige);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 300ms ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-soft);
+}
+
+.infoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: var(--sage);
+  color: white;
+  border-radius: 50%;
+  margin: 0 0 1.5rem;
+}
+
+.infoCard h3 {
+  color: var(--charcoal);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.infoCard p {
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.infoCard p:last-child {
+  margin-bottom: 0;
+}
+
+.infoSmall {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.infoLink {
+  color: var(--brown);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.5rem;
+  transition: all 200ms ease;
+}
+
+.infoLink:hover {
+  color: var(--brown-dark);
+  transform: translateX(3px);
+}
+
+/* Process Section */
+.processSection {
+  background: linear-gradient(135deg, rgba(122, 141, 123, 0.06) 0%, transparent 100%);
+}
+
+.processIntro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.processIntro h2 {
+  color: var(--charcoal);
+  margin-bottom: 1rem;
+}
+
+.processIntro p {
+  max-width: 500px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.processSteps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.processStep {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  transition: all 300ms ease;
+}
+
+.processStep:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.stepNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--brown);
+  color: white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 1rem;
+  line-height: 1;
+}
+
+.processStep h4 {
+  color: var(--charcoal);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.processStep p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Browse Section */
+.browseSection {
+  background: white;
+  text-align: center;
+}
+
+.browseContent h2 {
+  color: var(--charcoal);
+  margin-bottom: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.browseContent p {
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-size: 1.05rem;
+}
+
+/* Final CTA Section */
+.finalCtaSection {
+  background: linear-gradient(135deg, #A67C52 0%, #8B6340 100%);
+  color: white;
+  text-align: center;
+}
+
+.finalCtaContent h2 {
+  color: white;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.finalCtaContent p {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.finalCtaContent .btn-primary {
+  background: white;
+  color: var(--brown);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.finalCtaContent .btn-primary:hover {
+  background: var(--beige);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .processSteps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .infoCard {
+    padding: 1.5rem;
+  }
+
+  .processSteps {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .processStep {
+    padding: 1.5rem;
+  }
+
   .pageIntro {
     text-align: center;
   }
@@ -24,5 +241,44 @@
   .contactCompactBtn {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .pageIntro {
+    padding-bottom: 0.5rem;
+  }
+
+  .contactCompactBtn {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .infoGrid {
+    gap: 1.2rem;
+  }
+
+  .infoCard {
+    padding: 1.2rem;
+  }
+
+  .infoCard h3 {
+    font-size: 1.1rem;
+  }
+
+  .processStep {
+    padding: 1.2rem;
+  }
+
+  .processStep h4 {
+    font-size: 1rem;
+  }
+
+  .finalCtaSection {
+    padding: 3rem 0;
+  }
+
+  .finalCtaContent h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
   }
 }

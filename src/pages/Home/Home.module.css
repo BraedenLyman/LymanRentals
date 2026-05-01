@@ -1,335 +1,618 @@
+/* HERO SECTION */
 .hero {
   position: relative;
-  min-height: min(88vh, 760px);
-  padding: 6.6rem 0 4.4rem;
+  min-height: min(90vh, 800px);
+  padding: 8rem 0 5rem;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.heroOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(45, 31, 17, 0.55), rgba(45, 31, 17, 0.2));
+  display: flex;
+  align-items: center;
 }
 
 .heroContent {
   position: relative;
   z-index: 1;
-  color: #fff;
-  max-width: 760px;
+  color: white;
+  max-width: 800px;
+  animation: fadeInUp 800ms ease 200ms both;
 }
 
-.hero h1 {
-  font-size: clamp(2.6rem, 7vw, 4.7rem);
-  line-height: 0.97;
-  margin-bottom: 1rem;
+.heroContent h1 {
+  color: white;
+  font-size: clamp(2.8rem, 8vw, 5.2rem);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
 }
 
-.hero .eyebrow,
-.heroCopy {
-  color: #f9eee0;
-}
-
-.heroCopy {
+.heroSubtext {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.3rem;
   max-width: 640px;
-  font-size: 1.08rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
 }
 
 .heroActions {
-  margin-top: 1.8rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.startInquiryBtn {
-  color: var(--line-strong);
-  border-color: var(--line-strong);
-}
-
-.startInquiryBtn:hover {
-  color: var(--line-strong);
-  border-color: var(--line-strong);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.about {
-  background: var(--surface);
-}
-
-.aboutGrid {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 1.4rem;
-  align-items: start;
-}
-
-.aboutGrid > div:first-child p {
-  max-width: 58ch;
-}
-
-.aboutCards {
-  display: grid;
-  gap: 0.9rem;
-}
-
-.aboutCards article {
-  border: 1px solid var(--line);
-  background: #fff;
-  border-radius: 14px;
-  padding: 1.2rem;
-  box-shadow: var(--shadow-soft);
-}
-
-.aboutCards h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.4rem;
-}
-
-.rentalsSection {
-  padding-top: 3rem;
-}
-
-.rentalsHead {
   display: flex;
   gap: 1rem;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 1.35rem;
+  flex-wrap: wrap;
 }
 
-.rentalGrid {
+.secondaryBtn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid white;
+  color: white;
+  box-shadow: none;
+}
+
+.secondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: white;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SECTION 2: WHAT WE OFFER */
+.offeringSection {
+  background: var(--white);
+}
+
+.sectionIntro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionIntro h2 {
+  color: var(--charcoal);
+  margin-bottom: 0.5rem;
+}
+
+.sectionIntro p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.offeringGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 0;
+}
+
+.offeringCard {
+  background: var(--beige);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.offeringCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+
+.offeringIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: var(--sage);
+  color: white;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  transition: transform 300ms ease;
+}
+
+.offeringCard:hover .offeringIcon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.offeringCard h3 {
+  color: var(--charcoal);
+  margin-bottom: 0.75rem;
+}
+
+.offeringCard p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* SECTION 3: FEATURED RENTALS */
+.featuredSection {
+  background: linear-gradient(135deg, rgba(122, 141, 123, 0.04) 0%, transparent 100%);
+}
+
+.featuredGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
-.rentalCard {
-  border: 1px solid var(--line);
-  background: #fff;
-  border-radius: 16px;
+.productCard {
+  background: white;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--shadow-soft);
-  transition: transform 250ms ease, box-shadow 250ms ease;
-  cursor: pointer;
+  transition: all 300ms ease;
 }
 
-.rentalCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(47, 32, 16, 0.13);
+.productCard:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-md);
 }
 
-.rentalImageWrap {
+.productImage {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4/3;
   overflow: hidden;
-  border-radius: 16px;
+  background: var(--beige);
 }
 
-.rentalImageWrap img {
+.productImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease;
+}
+
+.productCard:hover .productImage img {
+  transform: scale(1.08);
+}
+
+.categoryTag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--charcoal);
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.productBody {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.productBody h3 {
+  color: var(--charcoal);
+  margin-bottom: 0.5rem;
+  font-size: 1.35rem;
+}
+
+.productPrice {
+  color: var(--brown);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.productDescription {
+  color: var(--muted);
+  font-size: 0.95rem;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.viewLink {
+  color: var(--brown);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 200ms ease;
+  align-self: flex-start;
+}
+
+.viewLink:hover {
+  color: var(--brown-dark);
+  transform: translateX(4px);
+}
+
+.viewAllContainer {
+  display: flex;
+  justify-content: center;
+}
+
+/* SECTION 4: WHY CHOOSE US */
+.trustSection {
+  background: var(--white);
+}
+
+.trustGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.trustCard {
+  background: var(--beige);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.trustCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-soft);
+}
+
+.trustIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--sage);
+  color: white;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+.trustCard h3 {
+  color: var(--charcoal);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.trustCard p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* SECTION 5: GALLERY PREVIEW */
+.galleryPreviewSection {
+  background: linear-gradient(135deg, rgba(166, 124, 82, 0.06) 0%, transparent 100%);
+}
+
+.masonryGrid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+  grid-auto-rows: 220px;
+}
+
+.masonryItem {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+}
+
+.masonryItem.tall {
+  grid-row: span 2;
+  grid-auto-rows: auto;
+}
+
+.masonryItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease;
+}
+
+.masonryItem:hover img {
+  transform: scale(1.08);
+}
+
+/* SECTION 6: OUR STORY */
+.storySection {
+  background: linear-gradient(135deg, var(--beige) 0%, rgba(122, 141, 123, 0.08) 100%);
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.storyText h2 {
+  color: var(--charcoal);
+  margin-bottom: 1.5rem;
+}
+
+.storyText p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.storyText p:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.learnMoreLink {
+  color: var(--brown);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 200ms ease;
+  display: inline-block;
+}
+
+.learnMoreLink:hover {
+  color: var(--brown-dark);
+  transform: translateX(4px);
+}
+
+.storyImage {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 3/2;
+}
+
+.storyImage img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.tag {
-  position: absolute;
-  left: 0.7rem;
-  top: 0.7rem;
-  background: rgba(255, 255, 255, 0.94);
-  color: var(--text);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 0.3rem 0.6rem;
-  font-size: 0.73rem;
-  font-weight: 700;
-}
-
-.rentalCardBody {
-  padding: 1rem;
-}
-
-.rentalCardBody h3 {
-  font-size: 1.55rem;
-  margin-bottom: 0.5rem;
-}
-
-.price {
-  font-weight: 700;
-  color: var(--accent);
-}
-
-.featuredProductsFooter {
-  margin-top: 1.1rem;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.processSection {
-  padding-top: 3.5rem;
-  background: linear-gradient(180deg, #f8f4ee, #f6f0e8);
-}
-
-.processGrid {
-  margin-top: 1rem;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.85rem;
-}
-
-.processCard {
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: #fff;
-  padding: 1rem;
-  box-shadow: var(--shadow-soft);
-}
-
-.processHead {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-}
-
-.stepIndex {
-  display: inline-flex;
-  font-size: 0.72rem;
-  letter-spacing: 0.07em;
-  color: var(--accent);
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.processCard h3 {
-  font-size: 1.45rem;
-  margin: 0;
-}
-
-.processCard p {
-  margin-top: 0.5rem;
-}
-
+/* SECTION 7: TESTIMONIALS */
 .testimonialSection {
-  background: var(--surface);
+  background: var(--white);
 }
 
 .testimonialGrid {
-  margin-top: 1.2rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.8rem;
+  gap: 2rem;
 }
 
-.testimonialGrid article {
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: #fff;
-  padding: 1rem;
-  box-shadow: var(--shadow-soft);
+.testimonialCard {
+  background: var(--beige);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 300ms ease;
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
-.testimonialGrid article p {
-  font-size: 0.95rem;
+.testimonialCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
 }
 
-.testimonialGrid article span {
-  margin-top: auto;
-  padding-top: 0.85rem;
-  display: block;
-  font-size: 0.82rem;
-  color: var(--accent);
+.stars {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.star {
+  color: var(--brown);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.testimonialQuote {
+  color: var(--charcoal);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.testimonialAuthor {
+  color: var(--sage);
   font-weight: 700;
+  font-size: 0.95rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  margin: 0;
 }
 
-.contactSection {
-  background: linear-gradient(130deg, #f7efe4 0%, #f4eadf 50%, #f7f1e8 100%);
+/* SECTION 8: FINAL CTA */
+.finalCtaSection {
+  background: linear-gradient(135deg, #A67C52 0%, #8B6340 100%);
+  color: white;
+  text-align: center;
+  padding: 5.5rem 0;
 }
 
-.contactWrap {
-  display: grid;
-  grid-template-columns: 1.2fr 0.9fr;
+.finalCtaContent h2 {
+  color: white;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+
+.finalCtaContent p {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.finalCtaButtons {
+  display: flex;
   gap: 1rem;
-  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.contactCard {
-  display: grid;
-  align-content: start;
-  gap: 0.8rem;
-  margin-top: auto;
+.finalCtaButtons .btn-primary {
+  background: white;
+  color: var(--brown);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.contactCard h3 {
-  font-size: 1.65rem;
+.finalCtaButtons .btn-primary:hover {
+  background: var(--beige);
 }
 
-@media (max-width: 1100px) {
-  .rentalGrid,
-  .testimonialGrid,
-  .processGrid {
+.finalCtaButtons .btn-secondary {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: white;
+  color: white;
+}
+
+.finalCtaButtons .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .offeringGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .heroContent {
-    text-align: center;
+  .trustGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .aboutGrid,
-  .contactWrap {
-    grid-template-columns: 1fr;
+  .masonryGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: 180px;
+  }
+
+  .masonryItem.tall {
+    grid-row: span 1;
   }
 }
 
-@media (max-width: 850px) {
-  .hero {
-    min-height: 74vh;
-    padding-top: 5rem;
+@media (max-width: 1024px) {
+  .featuredGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .rentalsHead {
+  .trustGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .storyGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .masonryGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .heroSubtext {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .heroActions {
+    gap: 0.75rem;
+  }
+
+  .heroActions .btn {
+    min-height: 44px;
+    font-size: 0.9rem;
+  }
+
+  .offeringGrid,
+  .testimonialGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .trustGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .featuredGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .sectionIntro {
+    margin-bottom: 2rem;
+  }
+
+  .sectionIntro h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+  }
+
+  .masonryGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 140px;
+    gap: 1rem;
+  }
+
+  .finalCtaSection {
+    padding: 3.5rem 0;
+  }
+
+  .finalCtaContent h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+  }
+
+  .finalCtaButtons {
     flex-direction: column;
-    align-items: flex-start;
+  }
+
+  .finalCtaButtons .btn {
+    width: 100%;
   }
 }
 
 @media (max-width: 600px) {
-  .rentalGrid,
-  .testimonialGrid,
-  .processGrid {
+  .hero {
+    min-height: min(75vh, 600px);
+    padding: 5rem 0 3rem;
+  }
+
+  .offeringCard,
+  .trustCard,
+  .testimonialCard {
+    padding: 1.5rem;
+  }
+
+  .productCard {
+    border-radius: 8px;
+  }
+
+  .productImage {
+    aspect-ratio: 3/2;
+  }
+
+  .masonryGrid {
     grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
   }
 
-  .about {
-    text-align: center;
+  .storyText p {
+    font-size: 1rem;
   }
 
-  .rentalsSection {
-    text-align: center;
-  }
-
-  .featuredProductsFooter {
-    justify-content: center;
-  }
-
-  .processSection {
-    text-align: center;
-  }
-
-  .processHead {
-    justify-content: center;
-  }
-
-  .testimonialSection {
-    text-align: center;
-  }
-
-  .contactSection {
-    text-align: center;
+  .testimonialQuote {
+    font-size: 0.95rem;
   }
 }
